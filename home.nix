@@ -20,18 +20,13 @@
   home.packages = with pkgs; [
     brave
     discord
-    gnumake
-    clang
-    lldb
     onefetch
     cpufetch
-    valgrind
     wl-clipboard
     zigpkgs.master
     ncdu
     unzip
     zip
-    python3
     scc
   ];
 
@@ -93,6 +88,13 @@
           inline-diagnostics.cursor-line = "warning";
           cursor-shape.insert = "bar";
           popup-border = "all";
+          lsp.display-progress-messages = true;
+          statusline = {
+            right = ["diagnostics" "selections" "position" "file-encoding" "file-line-ending" "file-type"];
+            mode.normal = "NORMAL";
+            mode.insert = "INSERT";
+            mode.select = "SELECT";
+          };
         };
       };
       themes = {
@@ -160,10 +162,10 @@
           "diagnostic.error".underline = { color = red; style = "curl"; };
           "diagnostic.unnecessary" = { modifiers = ["dim"]; };
           "diagnostic.deprecated" = { modifiers = ["crossed_out"]; };
-          "info" = { fg = blue; modifiers = ["bold"]; };
-          "hint" = { fg = green; modifiers = ["bold"]; };
-          "warning" = { fg = yellow; modifiers = ["bold"]; };
-          "error" = { fg = red; modifiers = ["bold"]; };
+          "info" = { fg = blue; };
+          "hint" = { fg = green; };
+          "warning" = { fg = yellow; };
+          "error" = { fg = red; };
         };
       };
     };
@@ -181,6 +183,7 @@
       userName = "mikastiv";
       extraConfig = {
         init.defaultBranch = "main";
+        pull.rebase = true;
         commit.gpgsign = true;
         gpg.format = "ssh";
         user.signingKey = "~/.ssh/id_ed25519_sign.pub";
