@@ -136,7 +136,6 @@
           "tag" = { fg = orange; };
           "type" = { fg = orange; };
           "type.builtin" = { fg = purple; };
-          "type.enum" = { fg = purple; };
           "variable" = { fg = cyan; };
           "markup.heading" = { fg = hot-pink; };
           "markup.list" = { fg = yellow; };
