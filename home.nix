@@ -89,6 +89,7 @@
           cursor-shape.insert = "bar";
           popup-border = "all";
           lsp.display-progress-messages = true;
+          indent-guides.render = true;
           statusline = {
             right = ["diagnostics" "selections" "position" "file-encoding" "file-line-ending" "file-type"];
             mode.normal = "NORMAL";
@@ -156,6 +157,7 @@
           "ui.menu" = { bg = bg; };
           "ui.menu.selected" = { bg = selected; };
           "ui.debug" = red;
+          "ui.virtual.indent-guide" = light-gray;
           "diff.plus" = green;
           "diff.minus" = red;
           "diff.delta" = orange;
