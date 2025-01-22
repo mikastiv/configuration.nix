@@ -146,7 +146,8 @@
           "ui.selection" = { bg = selected; };
           "ui.linenr" = { fg = light-gray; };
           "ui.linenr.selected" = { fg = white; };
-          "ui.cursor" = { bg = cursor; fg = bg; };
+          "ui.cursor" = { bg = selected; };
+          "ui.cursor.primary" = { bg = cursor; fg = bg; };
           "ui.cursor.match" = { bg = selected; };
           "ui.statusline" = { bg = bar; fg = bg; };
           "ui.window" = light-gray;
