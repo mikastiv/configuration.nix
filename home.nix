@@ -151,6 +151,9 @@
           "ui.cursor.match" = { bg = selected; };
           "ui.statusline" = { bg = bar; fg = bg; };
           "ui.window" = light-gray;
+          "ui.popup" = { bg = bg; };
+          "ui.help" = { bg = bg; };
+          "ui.menu" = { bg = bg; };
           "ui.menu.selected" = { bg = selected; };
           "ui.debug" = red;
           "diff.plus" = green;
