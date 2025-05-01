@@ -38,7 +38,6 @@
     ".config/kitty/theme.conf".source = dotfiles/kitty/neowave.conf;
     ".config/ncdu/config".source = dotfiles/ncdu;
     ".config/lazygit/config.yml".source = dotfiles/lazygit.yml;
-    ".config/wezterm/wezterm.lua".source = dotfiles/wezterm/wezterm.lua;
     ".config/starship.toml".source = dotfiles/starship.toml;
     ".config/nvim" = {
       source = dotfiles/nvim;
