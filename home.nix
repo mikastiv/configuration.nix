@@ -185,12 +185,57 @@
       lfs.enable = true;
       userEmail = "mikastiv@outlook.com";
       userName = "mikastiv";
+      diff-so-fancy.enable = true;
       extraConfig = {
         init.defaultBranch = "main";
-        pull.rebase = true;
+        branch.sort = "-commiterdate";
+        tag.sort = "-taggerdate";
+        blame.date = "relative";
+        log = {
+          abbrevCommit = true;
+          graphColors = "blue,yellow,cyan,magenta,green,red";
+        };
+        "color \"decorate\"" = {
+          HEAD = "red";
+          branch = "blue";
+          tag = "yellow";
+          remoteBranch = "magenta";
+        };
+        "color \"branch\"" = {
+          current = "magenta";
+          local = "default";
+          remote = "yellow";
+          upstream = "green";
+          plain = "blue";
+        };
+        pull = {
+          rebase = true;
+          default = "current";
+        };
+        push = {
+          autoSetupRemote = true;
+          default = "current";
+          followTags = true;
+        };
+        rebase = {
+          autoStash = true;
+          missingCommitsCheck = "warn";
+        };
+        rerere.enable = true;
         commit.gpgsign = true;
         gpg.format = "ssh";
         user.signingKey = "~/.ssh/id_ed25519_sign.pub";
+        core = {
+          compression = 9;
+          whitespace = "trailing-space,space-before-tab";
+          preloadindex = true;
+        };
+        "url \"git@github.com:/\"".insteadOf = "gh:";
+        status = {
+          branch = true;
+          showStash = true;
+          showUntrackedFiles = "all";
+        };
       };
       ignores = [
         "*.swp"
@@ -212,6 +257,9 @@
         ls = "eza";
         l = "eza -lab";
         cat = "bat";
+        gs = "git status";
+        gl = "git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n'";
+        gd = "git diff";
       };
     };
   };
