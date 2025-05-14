@@ -89,6 +89,7 @@
           popup-border = "all";
           lsp.display-progress-messages = true;
           indent-guides.render = true;
+          bufferline = "always";
           statusline = {
             right = ["diagnostics" "selections" "position" "file-encoding" "file-line-ending" "file-type"];
             mode.normal = "NORMAL";
