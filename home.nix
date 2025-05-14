@@ -151,6 +151,8 @@
           "ui.cursor.primary" = { bg = cursor; fg = bg; };
           "ui.cursor.match" = { bg = selected; };
           "ui.statusline" = { bg = bar; fg = bg; };
+          "ui.bufferline" = { bg = "bg-light"; fg = "light-gray" };
+          "ui.bufferline.active" = { bg = "bar"; fg = "bg" };
           "ui.window" = light-gray;
           "ui.popup" = { bg = bg; };
           "ui.help" = { bg = bg; };
