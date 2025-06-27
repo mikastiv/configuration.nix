@@ -5,6 +5,7 @@
   home.homeDirectory = "/home/${username}";
 
   home.packages = with pkgs; [
+    _1password-gui
     brave
     discord
     cpufetch

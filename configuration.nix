@@ -37,7 +37,7 @@
   time.timeZone = "America/Moncton";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_CA.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
@@ -105,12 +105,6 @@
   programs.zsh.enable = true;
   environment.shells = [ pkgs.zsh ];
   users.defaultUserShell = pkgs.zsh;
-
-  # 1Password
-  programs._1password-gui = {
-    enable = true;
-    polkitPolicyOwners = [ "${username}" ];
-  };
 
   # Steam
   programs.steam.enable = true;
