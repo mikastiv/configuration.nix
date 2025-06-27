@@ -7,8 +7,9 @@
   home.packages = with pkgs; [
     _1password-gui
     brave
-    discord
     cpufetch
+    discord
+    godot
     ncdu
   ];
 
@@ -57,6 +58,7 @@
         gs = "git status";
         gl = "git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n'";
         gd = "git diff";
+        nix-rebuild = "nixos-rebuild switch --flake $HOME/.flake#nixos";
       };
     };
   };
