@@ -15,7 +15,7 @@
   home.file = {
     ".config/ghostty/config".source = dotfiles/ghostty/config;
     ".config/ncdu/config".source = dotfiles/ncdu/config;
-    ".config/lazygit/config.yml".source = dotfiles/lazygit/lazygit.yml;
+    ".config/lazygit/config.yml".source = dotfiles/lazygit/config.yml;
     ".config/starship.toml".source = dotfiles/starship/starship.toml;
   };
 
