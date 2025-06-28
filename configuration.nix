@@ -53,6 +53,9 @@
     variant = "";
   };
 
+  # OpenRGB
+  services.hardware.openrgb.enable = true;
+
   # CUPS to print documents.
   services.printing.enable = false;
 
