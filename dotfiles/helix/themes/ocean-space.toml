@@ -28,6 +28,7 @@
 
 "ui.background" = { bg = "bg" }
 "ui.text" = "white"
+"ui.text.inactive" = { fg = "light-gray" }
 "ui.selection" = { bg = "selected" }
 "ui.linenr" = { fg = "light-gray" }
 "ui.linenr.selected" = { fg = "white" }
