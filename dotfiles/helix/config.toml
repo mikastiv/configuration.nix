@@ -1,0 +1,25 @@
+theme = "ocean-space"
+
+[editor]
+bufferline = "always"
+end-of-line-diagnostics = "hint"
+line-number = "relative"
+popup-border = "all"
+
+[editor.statusline]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.lsp]
+display-progress-messages = true
+
+[editor.indent-guides]
+render = true

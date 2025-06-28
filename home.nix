@@ -18,7 +18,13 @@
     ".config/ncdu/config".source = dotfiles/ncdu/config;
     ".config/lazygit/config.yml".source = dotfiles/lazygit/config.yml;
     ".config/starship.toml".source = dotfiles/starship/starship.toml;
+    ".config/helix/config.toml".source = dotfiles/helix/config.toml;
+    ".config/helix/themes/ocean-space.toml".source = dotfiles/helix/themes/ocean-space.toml;
   };
+
+  home.sessionPath = [
+    "$HOME/.anyzig"
+  ];
 
   xdg = {
     userDirs = {
@@ -47,6 +53,11 @@
       git = true;
     };
 
+    helix = {
+      enable = true;
+      defaultEditor = true;
+    };
+
     zsh = {
       enable = true;
       autosuggestion.enable = true;
@@ -65,7 +76,6 @@
 
   imports = [
     ./modules/git.nix
-    ./modules/helix.nix
   ];
 
   # This value determines the Home Manager release that your
