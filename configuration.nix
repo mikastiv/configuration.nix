@@ -12,9 +12,11 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.auto-optimise-store = true;
-  nix.gc.automatic = true;
-  nix.gc.dates = "weekly";
-  nix.gc.options = "--delete-older-than 14d";
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -111,6 +113,12 @@
 
   # Steam
   programs.steam.enable = true;
+
+  # 1Password
+  programs._1password-gui = {
+    enable = true;
+    polkitPolicyOwners = [ "${username}" ];
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
