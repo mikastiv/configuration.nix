@@ -19,6 +19,7 @@
     ".config/starship.toml".source = dotfiles/starship/starship.toml;
     ".config/helix/config.toml".source = dotfiles/helix/config.toml;
     ".config/helix/themes/ocean-space.toml".source = dotfiles/helix/themes/ocean-space.toml;
+    ".config/autostart/OpenRGB.desktop".source = dotfiles/openrgb/OpenRGB.desktop;
   };
 
   home.sessionPath = [
