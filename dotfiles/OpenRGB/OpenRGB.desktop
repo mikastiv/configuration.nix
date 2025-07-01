@@ -6,4 +6,4 @@ Name=OpenRGB
 StartupNotify=true
 Terminal=false
 Type=Application
-Exec=/run/current-system/sw/bin/openrgb --startminimized
+Exec=/run/current-system/sw/bin/openrgb --startminimized "~/.config/OpenRGB/mikastiv.orp"

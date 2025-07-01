@@ -111,6 +111,9 @@
   environment.shells = [ pkgs.zsh ];
   users.defaultUserShell = pkgs.zsh;
 
+  # Nix-ld for dynamic binaries
+  programs.nix-ld.enable = true;
+
   # Steam
   programs.steam.enable = true;
 
