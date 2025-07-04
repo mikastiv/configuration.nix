@@ -11,6 +11,7 @@
     godot
     ncdu
     qmk
+    thunderbird
   ];
 
   home.file = {
@@ -60,17 +61,6 @@
       defaultEditor = true;
     };
 
-    thunderbird = {
-      enable = true;
-      profiles."${username}" = {
-        isDefault = true;
-      };
-      settings = {
-        "general.useragent.override" = "";
-        "privacy.donottrackheader.enabled" = true;
-      };
-    };
-    
     zsh = {
       enable = true;
       autosuggestion.enable = true;
