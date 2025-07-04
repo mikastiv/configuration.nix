@@ -31,7 +31,9 @@
   # Bluetooth
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
-  services.blueman.enable = true;
+
+  # QMK
+  hardware.keyboard.qmk.enable = true;
 
   # Optimize SSD
   services.fstrim.enable = true;
