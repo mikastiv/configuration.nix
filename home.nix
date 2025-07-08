@@ -9,6 +9,7 @@
     cpufetch
     discord
     godot
+    ida-free
     ncdu
     qmk
     thunderbird
