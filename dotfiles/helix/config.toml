@@ -23,3 +23,8 @@ display-progress-messages = true
 
 #[editor.indent-guides]
 #render = true
+
+# Move lines up and down
+[keys.normal]
+"A-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
