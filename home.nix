@@ -9,6 +9,7 @@
     cpufetch
     discord
     godot
+    heroic
     ida-free
     ncdu
     qmk
