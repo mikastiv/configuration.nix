@@ -20,9 +20,10 @@
     ".config/ghostty/config".source = dotfiles/ghostty/config;
     ".config/ncdu/config".source = dotfiles/ncdu/config;
     ".config/lazygit/config.yml".source = dotfiles/lazygit/config.yml;
-    ".config/starship.toml".source = dotfiles/starship/starship.toml;
     ".config/helix/config.toml".source = dotfiles/helix/config.toml;
     ".config/helix/themes/ocean-space.toml".source = dotfiles/helix/themes/ocean-space.toml;
+    ".config/nvim/init.lua".source = dotfiles/nvim/init.lua;
+    ".config/starship.toml".source = dotfiles/starship/starship.toml;
     ".config/autostart/OpenRGB.desktop".source = dotfiles/OpenRGB/OpenRGB.desktop;
     ".config/OpenRGB/mikastiv.orp".source = dotfiles/OpenRGB/mikastiv.orp;
   };
@@ -61,6 +62,13 @@
     helix = {
       enable = true;
       defaultEditor = true;
+    };
+
+    neovim = {
+      enable = true;
+      viAlias = true;
+      vimAlias = true;
+      vimdiffAlias = true;
     };
 
     zsh = {
