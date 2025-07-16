@@ -1,4 +1,4 @@
-"attribute" = { fg = "yellow" }
+"attribute" = { fg = "red" }
 "comment" = { fg = "light-gray" }
 "constant" = { fg = "red" }
 "constant.numeric" = { fg = "orange" }
