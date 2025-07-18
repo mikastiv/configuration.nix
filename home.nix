@@ -1,4 +1,4 @@
-{ config, pkgs, username, ... }:
+{ config, pkgs, unstablePkgs, username, ... }:
 
 {
   home.username = "${username}";
@@ -62,6 +62,7 @@
     helix = {
       enable = true;
       defaultEditor = true;
+      package = unstablePkgs.helix;
     };
 
     neovim = {
