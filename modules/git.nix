@@ -1,4 +1,4 @@
-{ ... }:
+{ username, ... }:
 
 {
   programs.git = {
@@ -45,7 +45,7 @@
       rerere.enable = true;
       commit.gpgsign = true;
       gpg.format = "ssh";
-      user.signingKey = "~/.ssh/id_ed25519_sign.pub";
+      user.signingKey = "/home/${username}/.ssh/id_ed25519_sign.pub";
       core = {
         compression = 9;
         whitespace = "trailing-space,space-before-tab";
