@@ -45,6 +45,7 @@
 "ui.menu.selected" = { bg = "selected" }
 "ui.debug" = "red"
 "ui.virtual.indent-guide" = "light-gray"
+"ui.virtual.jump-label" = { fg = "hot-pink", modifiers = ["bold"] }
 
 "diff.plus" = "green"
 "diff.minus" = "red"
