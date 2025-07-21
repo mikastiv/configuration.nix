@@ -5,6 +5,7 @@ bufferline = "always"
 end-of-line-diagnostics = "hint"
 line-number = "relative"
 popup-border = "all"
+auto-pairs = false
 
 [editor.statusline]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
