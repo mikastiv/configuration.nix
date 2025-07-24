@@ -29,7 +29,7 @@
   };
 
   home.sessionPath = [
-    "home/${username}/.anyzig"
+    "/home/${username}/.anyzig"
   ];
 
   xdg = {
