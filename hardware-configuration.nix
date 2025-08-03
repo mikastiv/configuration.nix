@@ -18,15 +18,15 @@
       fsType = "ext4";
     };
 
+  fileSystems."/mnt/data" =
+    { device = "/dev/disk/by-uuid/5780fd62-f0ff-450a-a55f-efdeb26111dc";
+      fsType = "ext4";
+    };
+
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/FA23-B791";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
-    };
-
-  fileSystems."/mnt/data" =
-    { device = "/dev/disk/by-uuid/5780fd62-f0ff-450a-a55f-efdeb26111dc";
-      fsType = "ext4";
     };
 
   swapDevices =
