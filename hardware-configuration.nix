@@ -19,8 +19,14 @@
     };
 
   fileSystems."/mnt/data" =
-    { device = "/dev/disk/by-uuid/5780fd62-f0ff-450a-a55f-efdeb26111dc";
+    { device = "/dev/disk/by-uuid/0087c761-b0e9-40e2-bbda-839087a7e969";
       fsType = "ext4";
+    };
+
+  fileSystems."/mnt/transfer" =
+    { device = "/dev/disk/by-uuid/D161-C09F";
+      fsType = "vfat";
+      options = [ "rw" "umask=0002" "gid=100" ];
     };
 
   fileSystems."/boot" =
