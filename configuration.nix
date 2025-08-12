@@ -21,8 +21,15 @@
   # Bootloader.
   boot.loader = {
     systemd-boot.enable = true;
+    systemd-boot.configurationLimit = 3;
     efi.canTouchEfiVariables = true;
     timeout = 15;
+  };
+
+  # Plymouth
+  boot.plymouth = {
+    enable = true;
+    theme = "breeze";
   };
 
   # Use latest kernel.
