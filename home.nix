@@ -90,7 +90,7 @@
   };
 
   imports = [
-    ./modules/git.nix
+    ./modules/home/git.nix
   ];
 
   # This value determines the Home Manager release that your

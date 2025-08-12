@@ -46,6 +46,10 @@
       modules = [
         ./configuration.nix
 
+        ./modules/plasma.nix
+        ./modules/1password.nix
+        ./modules/steam.nix
+
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
