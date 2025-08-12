@@ -21,12 +21,13 @@
   fileSystems."/mnt/data" =
     { device = "/dev/disk/by-uuid/0087c761-b0e9-40e2-bbda-839087a7e969";
       fsType = "ext4";
+      options = [ "defaults" "nofail" ];
     };
 
   fileSystems."/mnt/transfer" =
-    { device = "/dev/disk/by-uuid/D161-C09F";
-      fsType = "vfat";
-      options = [ "rw" "umask=0002" "gid=100" ];
+    { device = "/dev/disk/by-uuid/BC9D-EEE8";
+      fsType = "exfat";
+      options = [ "nofail" "rw" "umask=0002" "gid=100" ];
     };
 
   fileSystems."/boot" =
