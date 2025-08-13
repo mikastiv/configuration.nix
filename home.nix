@@ -86,6 +86,14 @@
       initContent = ''
         fpath=(/home/${username}/.zig-completions $fpath)
       '';
+      history = {
+        append = true;
+        share = true;
+        findNoDups = true;
+        ignoreAllDups = true;
+        ignoreDups = true;
+        ignoreSpace = true;
+      };
     };
   };
 
