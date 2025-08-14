@@ -14,6 +14,7 @@
     ncdu
     qmk
     thunderbird
+    wl-clipboard
   ];
 
   home.file = {
