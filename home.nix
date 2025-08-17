@@ -18,7 +18,6 @@
   ];
 
   home.file = {
-    ".config/ghostty/config".source = dotfiles/ghostty/config;
     ".config/ncdu/config".source = dotfiles/ncdu/config;
     ".config/lazygit/config.yml".source = dotfiles/lazygit/config.yml;
     ".config/helix/config.toml".source = dotfiles/helix/config.toml;
@@ -58,6 +57,20 @@
       enable = true;
       icons = "auto";
       git = true;
+    };
+
+    ghostty = {
+      enable = true;
+      enableZshIntegration = true;
+      installBatSyntax = true;
+      installVimSyntax = true;
+      settings = {
+        theme = "Monokai Remastered";
+        keybind = [
+          "ctrl+shift+h=previous_tab"
+          "ctrl+shift+l=next_tab"
+        ];
+      };
     };
 
     helix = {
