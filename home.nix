@@ -8,11 +8,13 @@
     brave
     cpufetch
     discord
+    ghidra
     godot
     heroic
     ida-free
     ncdu
     qmk
+    scc
     thunderbird
     wl-clipboard
   ];

@@ -49,7 +49,6 @@
         ./modules/plasma.nix
         ./modules/1password.nix
         ./modules/steam.nix
-        ./modules/ghidra.nix
 
         home-manager.nixosModules.home-manager
         {
