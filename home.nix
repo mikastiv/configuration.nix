@@ -85,11 +85,96 @@
       vimAlias = true;
       vimdiffAlias = true;
     };
+
+    zsh = {
+      enable = true;
+      autosuggestion.enable = true;
+      defaultKeymap = "emacs";
+      shellAliases = {
+        ls = "eza";
+        cat = "bat";
+        gl = "git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n'";
+        nix-rebuild = "sudo nixos-rebuild switch --flake /home/${username}/.flake#nixos";
+        nix-delete-old-boot = "sudo nix-env --delete-generations +5 --profile /nix/var/nix/profiles/system";
+      };
+      initContent = ''
+        fpath=(/home/${username}/.zig-completions $fpath)
+      '';
+      history = {
+        append = true;
+        share = true;
+        findNoDups = true;
+        ignoreAllDups = true;
+        ignoreDups = true;
+        ignoreSpace = true;
+      };
+    };
+
+    git = {
+      enable = true;
+      lfs.enable = true;
+      userEmail = "mikastiv@outlook.com";
+      userName = "mikastiv";
+      diff-so-fancy.enable = true;
+      extraConfig = {
+        init.defaultBranch = "main";
+        branch.sort = "-commiterdate";
+        tag.sort = "-taggerdate";
+        blame.date = "relative";
+        log = {
+          abbrevCommit = true;
+          graphColors = "blue,yellow,cyan,magenta,green,red";
+        };
+        "color \"decorate\"" = {
+          HEAD = "red";
+          branch = "blue";
+          tag = "yellow";
+          remoteBranch = "magenta";
+        };
+        "color \"branch\"" = {
+          current = "magenta";
+          local = "default";
+          remote = "yellow";
+          upstream = "green";
+          plain = "blue";
+        };
+        pull = {
+          rebase = true;
+          default = "current";
+        };
+        push = {
+          autoSetupRemote = true;
+          default = "current";
+          followTags = true;
+        };
+        rebase = {
+          autoStash = true;
+          missingCommitsCheck = "warn";
+        };
+        rerere.enable = true;
+        commit.gpgsign = true;
+        gpg.format = "ssh";
+        user.signingKey = "/home/${username}/.ssh/id_ed25519_sign.pub";
+        core = {
+          compression = 9;
+          whitespace = "trailing-space,space-before-tab";
+          preloadindex = true;
+        };
+        "url \"git@github.com:/\"".insteadOf = "gh:";
+        status = {
+          branch = true;
+          showStash = true;
+          showUntrackedFiles = "all";
+        };
+      };
+      ignores = [
+        "*.swp"
+        ".direnv"
+      ];
+    };
   };
 
   imports = [
-    ./modules/home/git.nix
-    ./modules/home/zsh.nix
   ];
 
   # This value determines the Home Manager release that your
