@@ -31,7 +31,7 @@
   };
 
   home.sessionPath = [
-    "/home/${username}/.anyzig"
+    "/home/${username}/.zigup/zig-out/bin"
   ];
 
   xdg = {
@@ -101,6 +101,7 @@
       };
       initContent = ''
         fpath=(/home/${username}/.zig-completions $fpath)
+        compinit
       '';
       history = {
         append = true;

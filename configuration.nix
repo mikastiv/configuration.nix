@@ -23,7 +23,7 @@
     systemd-boot.enable = true;
     systemd-boot.configurationLimit = 3;
     efi.canTouchEfiVariables = true;
-    timeout = 15;
+    timeout = 30;
   };
 
   # Plymouth
