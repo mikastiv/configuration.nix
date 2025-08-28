@@ -35,4 +35,5 @@ display-progress-messages = true
 "C-j" = "jump_view_down"
 "C-k" = "jump_view_up"
 "C-l" = "jump_view_right"
-
+"C-d" = ["page_cursor_half_down", "align_view_center"]
+"C-u" = ["page_cursor_half_up", "align_view_center"]
