@@ -30,9 +30,7 @@
     ".config/OpenRGB/mikastiv.orp".source = dotfiles/OpenRGB/mikastiv.orp;
   };
 
-  home.sessionPath = [
-    "/home/${username}/.zigup/zig-out/bin"
-  ];
+  home.sessionPath = [ ];
 
   xdg = {
     userDirs = {
