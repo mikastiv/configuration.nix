@@ -14,6 +14,7 @@
     ida-free
     ncdu
     qmk
+    retroarch-full
     scc
     thunderbird
     wl-clipboard

@@ -46,6 +46,7 @@
 "ui.debug" = "red"
 "ui.virtual.indent-guide" = "light-gray"
 "ui.virtual.jump-label" = { fg = "hot-pink", modifiers = ["bold"] }
+"ui.virtual.ruler" = { bg = "light-gray" }
 
 "diff.plus" = "green"
 "diff.minus" = "red"
