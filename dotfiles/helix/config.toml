@@ -6,7 +6,7 @@ end-of-line-diagnostics = "hint"
 line-number = "relative"
 popup-border = "all"
 trim-trailing-whitespace = true
-rulers = [ 120 ]
+rulers = [ 100 ]
 
 [editor.statusline]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
