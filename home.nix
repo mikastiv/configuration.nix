@@ -1,4 +1,4 @@
-{ config, pkgs, unstablePkgs, username, ... }:
+{ config, pkgs, unstablePkgs, username, nurPkgs, ... }:
 
 {
   home.username = "${username}";
@@ -78,6 +78,24 @@
       enable = true;
       defaultEditor = true;
       package = unstablePkgs.helix;
+    };
+
+    librewolf = {
+      enable = true;
+      profiles.${username} = {
+        isDefault = true;
+        extensions.packages = with nurPkgs.repos.rycee.firefox-addons; [
+          onepassword-password-manager
+          darkreader
+          decentraleyes
+          privacy-badger
+        ];
+      };
+      settings = {
+        "browser.startup.page" = 3; # Restore previous session
+        "browser.sessionstore.resume_from_crash" = true;
+        "browser.sessionstore.resume_session_once" = false;
+      };
     };
 
     neovim = {

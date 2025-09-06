@@ -9,14 +9,19 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, lanzaboote, ... } @inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, lanzaboote, nur,... } @inputs:
     let
       system = "x86_64-linux";
       host = "nixos";
@@ -31,11 +36,15 @@
         inherit system;
         config.allowUnfree = true;
       };
+
+      nurPkgs = import nur {
+        inherit pkgs;
+      };
     in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
       inherit pkgs;
-  
+
       specialArgs = {
         inherit inputs;
         inherit host;
@@ -57,6 +66,7 @@
           home-manager.users.${username} = ./home.nix;
           home-manager.backupFileExtension = "backup";
           home-manager.extraSpecialArgs = {
+            inherit nurPkgs;
             inherit username;
             inherit unstablePkgs;
           };
@@ -76,4 +86,4 @@
     };
   };
 }
-        
+
