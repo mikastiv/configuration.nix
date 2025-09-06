@@ -5,7 +5,6 @@
   home.homeDirectory = "/home/${username}";
 
   home.packages = with pkgs; [
-    brave
     cpufetch
     discord
     ghidra
