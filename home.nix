@@ -84,7 +84,7 @@
       enable = true;
       profiles.${username} = {
         isDefault = true;
-        extensions.packages = with nurPkgs.repos.rycee.firefox-addons; [
+        extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
           onepassword-password-manager
           darkreader
           decentraleyes

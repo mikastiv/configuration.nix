@@ -30,15 +30,13 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
+
+        overlays = [ nur.overlays.default ];
       };
 
       unstablePkgs = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
-      };
-
-      nurPkgs = import nur {
-        inherit pkgs;
       };
     in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
@@ -66,7 +64,6 @@
           home-manager.users.${username} = ./home.nix;
           home-manager.backupFileExtension = "backup";
           home-manager.extraSpecialArgs = {
-            inherit nurPkgs;
             inherit username;
             inherit unstablePkgs;
           };
