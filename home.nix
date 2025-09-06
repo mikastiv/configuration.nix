@@ -11,11 +11,12 @@
     godot
     heroic
     ida-free
+    kdePackages.kmail
+    kdePackages.kmail-account-wizard
     ncdu
     qmk
     retroarch-full
     scc
-    thunderbird
     wl-clipboard
   ];
 
