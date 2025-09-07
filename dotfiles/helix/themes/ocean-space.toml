@@ -34,7 +34,7 @@
 "ui.linenr.selected" = { fg = "white" }
 "ui.cursor" = { bg = "selected" }
 "ui.cursor.primary" = { bg = "cursor", fg = "bg" }
-"ui.cursor.match" = { bg = "selected" }
+"ui.cursor.match" = { fg = "hot-pink", modifiers = ["bold"] }
 "ui.bufferline" = { bg = "bg-light", fg = "light-gray" }
 "ui.bufferline.active" = { bg = "bar", fg = "bg" }
 "ui.statusline" = { bg = "bar", fg = "bg" }
