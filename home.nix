@@ -1,4 +1,4 @@
-{ config, pkgs, unstablePkgs, username, nurPkgs, ... }:
+{ config, pkgs, unstablePkgs, username, nurPkgs, helix, ... }:
 
 {
   home.username = "${username}";
@@ -77,7 +77,7 @@
     helix = {
       enable = true;
       defaultEditor = true;
-      package = unstablePkgs.helix;
+      package = helix.packages.${pkgs.system}.default;
     };
 
     librewolf = {

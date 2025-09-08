@@ -19,9 +19,14 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    helix = {
+      url = "github:helix-editor/helix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, lanzaboote, nur,... } @inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, lanzaboote, nur, helix, ... } @inputs:
     let
       system = "x86_64-linux";
       host = "nixos";
@@ -30,7 +35,6 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-
         overlays = [ nur.overlays.default ];
       };
 
@@ -66,6 +70,7 @@
           home-manager.extraSpecialArgs = {
             inherit username;
             inherit unstablePkgs;
+            inherit helix;
           };
         }
 
