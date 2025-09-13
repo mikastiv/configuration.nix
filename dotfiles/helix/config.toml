@@ -3,7 +3,7 @@ theme = "ocean-space"
 [editor]
 bufferline = "always"
 end-of-line-diagnostics = "hint"
-line-number = "relative"
+# line-number = "relative"
 popup-border = "all"
 trim-trailing-whitespace = true
 rulers = [ 100 ]

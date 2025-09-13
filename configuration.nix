@@ -10,8 +10,11 @@
       ./hardware-configuration.nix
     ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nix.settings.auto-optimise-store = true;
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+    auto-optimise-store = true;
+    download-buffer-size = 268435500; # 256 Mib
+  };
   nix.gc = {
     automatic = true;
     dates = "weekly";
@@ -21,7 +24,7 @@
   # Bootloader.
   boot.loader = {
     systemd-boot.enable = true;
-    systemd-boot.configurationLimit = 3;
+    systemd-boot.configurationLimit = 5;
     efi.canTouchEfiVariables = true;
     timeout = 30;
   };
