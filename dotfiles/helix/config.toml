@@ -7,6 +7,7 @@ end-of-line-diagnostics = "hint"
 popup-border = "all"
 trim-trailing-whitespace = true
 rulers = [ 100 ]
+indent-heuristic = "simple"
 
 [editor.statusline]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
