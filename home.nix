@@ -8,6 +8,7 @@
     cpufetch
     discord
     ghidra
+    glances
     godot
     heroic
     ida-free
@@ -67,6 +68,7 @@
       installVimSyntax = true;
       settings = {
         theme = "Monokai Remastered";
+        shell-integration-features = "no-cursor";
         keybind = [
           "ctrl+shift+h=previous_tab"
           "ctrl+shift+l=next_tab"
