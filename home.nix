@@ -69,6 +69,7 @@
       settings = {
         theme = "Monokai Remastered";
         shell-integration-features = "no-cursor";
+        cursor-style-blink = true;
         keybind = [
           "ctrl+shift+h=previous_tab"
           "ctrl+shift+l=next_tab"
