@@ -118,8 +118,9 @@
         nix-rebuild = "sudo nixos-rebuild switch --flake /home/${username}/.flake#nixos";
         nix-delete-old-boot = "sudo nix-env --delete-generations +5 --profile /nix/var/nix/profiles/system";
       };
-      initContent = ''
+      completionInit = ''
         fpath=(/home/${username}/.zig-completions $fpath)
+        autoload -U compinit
         compinit
       '';
       history = {
