@@ -8,7 +8,6 @@
     cpufetch
     discord
     ghidra
-    glances
     godot
     heroic
     ida-free

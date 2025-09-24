@@ -12,12 +12,6 @@ indent-heuristic = "simple"
 [editor.auto-pairs]
 '{' = '}'
 
-[editor.statusline]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
-
 [editor.cursor-shape]
 insert = "bar"
 
@@ -30,15 +24,23 @@ display-progress-messages = true
 #[editor.indent-guides]
 #render = true
 
-# Move lines up and down
 [keys.normal]
-"A-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-"A-down" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-"A-up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-"C-h" = "jump_view_left"
-"C-j" = "jump_view_down"
-"C-k" = "jump_view_up"
-"C-l" = "jump_view_right"
-"C-d" = ["page_cursor_half_down", "align_view_center"]
-"C-u" = ["page_cursor_half_up", "align_view_center"]
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+C-l = "jump_view_right"
+C-d = ["page_cursor_half_down", "align_view_center"]
+C-u = ["page_cursor_half_up", "align_view_center"]
+C-m = "save_selection"
+C-s = ":write"
+ret = ["open_below", "normal_mode"]
+S-ret = ["open_above", "normal_mode"]
+X = "extend_line_above"
+# Move lines up and down
+A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+A-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+[keys.normal.space]
+q = ":quit"
