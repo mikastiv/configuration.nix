@@ -8,6 +8,7 @@ popup-border = "all"
 trim-trailing-whitespace = true
 rulers = [ 100 ]
 indent-heuristic = "simple"
+continue-comments = false
 
 [editor.auto-pairs]
 '{' = '}'
@@ -33,6 +34,7 @@ C-d = ["page_cursor_half_down", "align_view_center"]
 C-u = ["page_cursor_half_up", "align_view_center"]
 C-m = "save_selection"
 C-s = ":write"
+C-q = ":buffer-close"
 ret = ["open_below", "normal_mode"]
 S-ret = ["open_above", "normal_mode"]
 X = "extend_line_above"
