@@ -25,6 +25,7 @@
     ".config/lazygit/config.yml".source = dotfiles/lazygit/config.yml;
     ".config/helix/config.toml".source = dotfiles/helix/config.toml;
     ".config/helix/themes/ocean-space.toml".source = dotfiles/helix/themes/ocean-space.toml;
+    ".config/ghostty/config".source = dotfiles/ghostty/config;
     ".config/starship.toml".source = dotfiles/starship/starship.toml;
     ".config/autostart/OpenRGB.desktop".source = dotfiles/OpenRGB/OpenRGB.desktop;
     ".config/OpenRGB/mikastiv.orp".source = dotfiles/OpenRGB/mikastiv.orp;
@@ -61,18 +62,8 @@
 
     ghostty = {
       enable = true;
-      enableZshIntegration = true;
       installBatSyntax = true;
-      installVimSyntax = true;
-      settings = {
-        theme = "Monokai Remastered";
-        shell-integration-features = "no-cursor";
-        cursor-style-blink = true;
-        keybind = [
-          "ctrl+shift+h=previous_tab"
-          "ctrl+shift+l=next_tab"
-        ];
-      };
+      package = unstablePkgs.ghostty;
     };
 
     helix = {
