@@ -5,12 +5,11 @@
   home.homeDirectory = "/home/${username}";
 
   home.packages = with pkgs; [
-    cpufetch
     discord
     ghidra
     godot
     heroic
-    ida-free
+    unstablePkgs.ida-free
     kdePackages.kmail
     kdePackages.kmail-account-wizard
     ncdu
