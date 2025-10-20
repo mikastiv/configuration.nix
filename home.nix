@@ -5,11 +5,14 @@
   home.homeDirectory = "/home/${username}";
 
   home.packages = with pkgs; [
+    unstablePkgs.code-cursor
+    unstablePkgs.godot
+    unstablePkgs.ida-free
+    unstablePkgs.renderdoc
+    brave
     discord
     ghidra
-    godot
     heroic
-    unstablePkgs.ida-free
     kdePackages.kmail
     kdePackages.kmail-account-wizard
     ncdu
