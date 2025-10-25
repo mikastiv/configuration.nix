@@ -16,8 +16,8 @@
     kdePackages.kmail
     kdePackages.kmail-account-wizard
     ncdu
+    mupen64plus
     qmk
-    retroarch-full
     scc
     wl-clipboard
   ];
