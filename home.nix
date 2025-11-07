@@ -9,6 +9,7 @@
     unstablePkgs.godot
     unstablePkgs.ida-free
     unstablePkgs.renderdoc
+    ftb-app
     brave
     discord
     ghidra

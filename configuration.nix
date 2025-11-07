@@ -24,7 +24,7 @@
   # Bootloader.
   boot.loader = {
     systemd-boot.enable = true;
-    systemd-boot.configurationLimit = 5;
+    systemd-boot.configurationLimit = 3;
     efi.canTouchEfiVariables = true;
     timeout = 30;
   };
@@ -71,7 +71,7 @@
   services.fstrim.enable = true;
 
   # OpenRGB
-  services.hardware.openrgb.enable = true;
+  # services.hardware.openrgb.enable = true;
 
   # Audio with pipewire
   services.pulseaudio.enable = false;
