@@ -20,7 +20,9 @@
     mupen64plus
     qmk
     scc
+    vlc
     wl-clipboard
+    yt-dlp
   ];
 
   home.file = {
