@@ -71,7 +71,7 @@
   services.fstrim.enable = true;
 
   # OpenRGB
-  # services.hardware.openrgb.enable = true;
+  services.hardware.openrgb.enable = true;
 
   # Audio with pipewire
   services.pulseaudio.enable = false;
