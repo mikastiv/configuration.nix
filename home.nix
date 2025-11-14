@@ -14,8 +14,6 @@
     discord
     ghidra
     heroic
-    kdePackages.kmail
-    kdePackages.kmail-account-wizard
     ncdu
     mupen64plus
     qmk
