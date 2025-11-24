@@ -20,6 +20,7 @@
 "type.builtin" = { fg = "purple" }
 "type.enum" = { fg = "purple" }
 "variable" = { fg = "cyan" }
+"variable.builtin" = { fg = "purple" }
 
 "markup.heading" = { fg = "hot-pink" }
 "markup.list" = { fg = "yellow" }
@@ -29,12 +30,15 @@
 "ui.background" = { bg = "bg" }
 "ui.text" = "white"
 "ui.text.inactive" = { fg = "light-gray" }
+"ui.text.focus" = { bg = "selected" }
+"ui.text.directory" = { fg = "cyan" }
 "ui.selection" = { bg = "selected" }
 "ui.linenr" = { fg = "light-gray" }
 "ui.linenr.selected" = { fg = "white" }
 "ui.cursor" = { bg = "selected" }
 "ui.cursor.primary" = { bg = "cursor", fg = "bg" }
 "ui.cursor.match" = { fg = "hot-pink", modifiers = ["bold"] }
+"ui.cursorline.primary" = { bg = "light-gray" }
 "ui.bufferline" = { bg = "bg-light", fg = "light-gray" }
 "ui.bufferline.active" = { bg = "bar", fg = "bg" }
 "ui.statusline" = { bg = "bar", fg = "bg" }
@@ -43,10 +47,12 @@
 "ui.help" = { bg = "bg" }
 "ui.menu" = { bg = "bg" }
 "ui.menu.selected" = { bg = "selected" }
+"ui.menu.scroll" = { fg = "bar" }
 "ui.debug" = "red"
 "ui.virtual.indent-guide" = "light-gray"
 "ui.virtual.jump-label" = { fg = "hot-pink", modifiers = ["bold"] }
 "ui.virtual.ruler" = { bg = "light-gray" }
+"ui.virtual.inlay-hint" = { modifiers = ["dim"] }
 
 "diff.plus" = "green"
 "diff.minus" = "red"
