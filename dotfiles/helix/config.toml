@@ -2,6 +2,7 @@ theme = "ocean-space"
 
 [editor]
 bufferline = "always"
+cursorline = true
 end-of-line-diagnostics = "hint"
 # line-number = "relative"
 popup-border = "all"
