@@ -27,7 +27,7 @@
     ".config/ncdu/config".source = dotfiles/ncdu/config;
     ".config/lazygit/config.yml".source = dotfiles/lazygit/config.yml;
     ".config/helix/config.toml".source = dotfiles/helix/config.toml;
-    ".config/helix/themes/ocean-space.toml".source = dotfiles/helix/themes/ocean-space.toml;
+    # ".config/helix/themes/ocean-space.toml".source = dotfiles/helix/themes/ocean-space.toml;
     ".config/ghostty/config".source = dotfiles/ghostty/config;
     ".config/starship.toml".source = dotfiles/starship/starship.toml;
     ".config/autostart/OpenRGB.desktop".source = dotfiles/OpenRGB/OpenRGB.desktop;
