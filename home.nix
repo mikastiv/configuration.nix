@@ -9,13 +9,14 @@
     unstablePkgs.godot
     unstablePkgs.ida-free
     unstablePkgs.renderdoc
-    ftb-app
     brave
     discord
+    ftb-app
     ghidra
     heroic
     ncdu
     mupen64plus
+    poop
     qmk
     scc
     vlc
@@ -72,7 +73,7 @@
     helix = {
       enable = true;
       defaultEditor = true;
-      package = helix.packages.${pkgs.system}.default;
+      package = helix.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
 
     librewolf = {
@@ -119,13 +120,19 @@
       };
     };
 
+    diff-so-fancy = {
+      enable = true;
+      enableGitIntegration = true;
+    };
+
     git = {
       enable = true;
       lfs.enable = true;
-      userEmail = "mikastiv@outlook.com";
-      userName = "mikastiv";
-      diff-so-fancy.enable = true;
-      extraConfig = {
+      settings = {
+        user = {
+          email = "mikastiv@outlook.com";
+          name = "mikastiv";
+        };
         init.defaultBranch = "main";
         branch.sort = "-commiterdate";
         tag.sort = "-taggerdate";
