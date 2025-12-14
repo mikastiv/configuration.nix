@@ -12,5 +12,4 @@ font-style = Regular
 background-opacity = 0.90
 background-blur-radius = 20
 
-confirm-close-surface = false
 resize-overlay = never
