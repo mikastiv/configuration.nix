@@ -1,9 +1,7 @@
 {
-  config,
   pkgs,
   unstablePkgs,
   username,
-  nurPkgs,
   helix,
   zig-completions,
   ...
@@ -14,7 +12,6 @@
   home.homeDirectory = "/home/${username}";
 
   home.packages = with pkgs; [
-    unstablePkgs.code-cursor
     unstablePkgs.godot
     unstablePkgs.ida-free
     unstablePkgs.renderdoc
