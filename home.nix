@@ -1,4 +1,13 @@
-{ config, pkgs, unstablePkgs, username, nurPkgs, helix, zig-completions, ... }:
+{
+  config,
+  pkgs,
+  unstablePkgs,
+  username,
+  nurPkgs,
+  helix,
+  zig-completions,
+  ...
+}:
 
 {
   home.username = "${username}";
@@ -14,8 +23,10 @@
     ftb-app
     ghidra
     heroic
-    ncdu
+    nil
+    nixfmt
     mupen64plus
+    ncdu
     poop
     qmk
     scc

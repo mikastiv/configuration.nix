@@ -31,7 +31,17 @@
     };
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, lanzaboote, nur, helix, zig-completions, ... } @inputs:
+  outputs =
+    {
+      nixpkgs,
+      nixpkgs-unstable,
+      home-manager,
+      lanzaboote,
+      nur,
+      helix,
+      zig-completions,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
       host = "nixos";
@@ -47,51 +57,54 @@
         inherit system;
         config.allowUnfree = true;
       };
-    in {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      inherit system;
-      inherit pkgs;
+    in
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        inherit system;
+        inherit pkgs;
 
-      specialArgs = {
-        inherit inputs;
-        inherit host;
-        inherit username;
-        inherit unstablePkgs;
+        specialArgs = {
+          inherit inputs;
+          inherit host;
+          inherit username;
+          inherit unstablePkgs;
+        };
+
+        modules = [
+          ./configuration.nix
+
+          ./modules/plasma.nix
+          ./modules/1password.nix
+          ./modules/steam.nix
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.${username} = ./home.nix;
+            home-manager.backupFileExtension = "backup";
+            home-manager.extraSpecialArgs = {
+              inherit username;
+              inherit unstablePkgs;
+              inherit helix;
+              inherit zig-completions;
+            };
+          }
+
+          lanzaboote.nixosModules.lanzaboote
+          (
+            { pkgs, lib, ... }:
+            {
+              environment.systemPackages = [
+                pkgs.sbctl
+              ];
+
+              boot.loader.systemd-boot.enable = lib.mkForce false;
+              boot.lanzaboote.enable = true;
+              boot.lanzaboote.pkiBundle = "/var/lib/sbctl";
+            }
+          )
+        ];
       };
-
-      modules = [
-        ./configuration.nix
-
-        ./modules/plasma.nix
-        ./modules/1password.nix
-        ./modules/steam.nix
-
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.${username} = ./home.nix;
-          home-manager.backupFileExtension = "backup";
-          home-manager.extraSpecialArgs = {
-            inherit username;
-            inherit unstablePkgs;
-            inherit helix;
-            inherit zig-completions;
-          };
-        }
-
-        lanzaboote.nixosModules.lanzaboote
-        ({ pkgs, lib, ... }: {
-          environment.systemPackages = [
-            pkgs.sbctl
-          ];
-
-          boot.loader.systemd-boot.enable = lib.mkForce false;
-          boot.lanzaboote.enable = true;
-          boot.lanzaboote.pkiBundle = "/var/lib/sbctl";
-        })
-      ];
     };
-  };
 }
-
