@@ -24,9 +24,14 @@
       url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zig-completions = {
+      url = "git+https://codeberg.org/ziglang/shell-completions";
+      flake = false;
+    };
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, lanzaboote, nur, helix, ... } @inputs:
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, lanzaboote, nur, helix, zig-completions, ... } @inputs:
     let
       system = "x86_64-linux";
       host = "nixos";
@@ -71,6 +76,7 @@
             inherit username;
             inherit unstablePkgs;
             inherit helix;
+            inherit zig-completions;
           };
         }
 

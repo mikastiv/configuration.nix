@@ -249,7 +249,8 @@
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
-        "nur": "nur"
+        "nur": "nur",
+        "zig-completions": "zig-completions"
       }
     },
     "rust-overlay": {
@@ -292,6 +293,22 @@
         "owner": "oxalica",
         "repo": "rust-overlay",
         "type": "github"
+      }
+    },
+    "zig-completions": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1764066384,
+        "narHash": "sha256-+sV3BitKhALNQys3u+wsMSHTH3QxoRZ1i75fazIgOjQ=",
+        "ref": "refs/heads/master",
+        "rev": "c2983a75dcbcaf3a1df74ab563a9bd3c8e7f448e",
+        "revCount": 18,
+        "type": "git",
+        "url": "https://codeberg.org/ziglang/shell-completions"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/ziglang/shell-completions"
       }
     }
   },

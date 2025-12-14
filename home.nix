@@ -1,4 +1,4 @@
-{ config, pkgs, unstablePkgs, username, nurPkgs, helix, ... }:
+{ config, pkgs, unstablePkgs, username, nurPkgs, helix, zig-completions, ... }:
 
 {
   home.username = "${username}";
@@ -33,6 +33,10 @@
     ".config/starship.toml".source = dotfiles/starship/starship.toml;
     ".config/autostart/OpenRGB.desktop".source = dotfiles/OpenRGB/OpenRGB.desktop;
     ".config/OpenRGB/mikastiv.orp".source = dotfiles/OpenRGB/mikastiv.orp;
+    ".zig-completions" = {
+      source = zig-completions;
+      recursive = true;
+    };
   };
 
   home.sessionPath = [ ];
