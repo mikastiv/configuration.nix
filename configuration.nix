@@ -29,6 +29,14 @@
     timeout = 30;
   };
 
+  # Disable hibernate
+  systemd.sleep.extraConfig = ''
+    AllowHibernation=no
+    AllowHybridSleep=no
+    AllowSuspendThenHibernate=no
+  '';
+
+
   # Plymouth
   boot.plymouth = {
     enable = true;

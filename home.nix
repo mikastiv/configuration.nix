@@ -12,12 +12,12 @@
   home.homeDirectory = "/home/${username}";
 
   home.packages = with pkgs; [
+    unstablePkgs.ftb-app
     unstablePkgs.godot
     unstablePkgs.ida-free
     unstablePkgs.renderdoc
     brave
     discord
-    ftb-app
     ghidra
     heroic
     nil
