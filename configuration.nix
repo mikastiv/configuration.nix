@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, host, username, ... }:
+{ pkgs, host, username, ... }:
 
 {
   imports =
@@ -30,12 +30,10 @@
   };
 
   # Disable hibernate
-  systemd.sleep.extraConfig = ''
-    AllowHibernation=no
-    AllowHybridSleep=no
-    AllowSuspendThenHibernate=no
-  '';
-
+  systemd.targets = {
+    hibernate.enable = false;
+    hybrid-sleep.enable = false;
+  };
 
   # Plymouth
   boot.plymouth = {
