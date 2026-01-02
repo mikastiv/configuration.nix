@@ -90,6 +90,17 @@
       package = helix.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
 
+    thunderbird = {
+      enable = true;
+      profiles.${username} = {
+        isDefault = true;
+      };
+      settings = {
+        "general.useragent.override" = "";
+        "privacy.donottrackheader.enabled" = true;
+      };
+    };
+
     librewolf = {
       enable = true;
       profiles.${username} = {
