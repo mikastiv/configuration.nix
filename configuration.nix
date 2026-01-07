@@ -30,10 +30,10 @@
   };
 
   # Disable hibernate
-  systemd.targets = {
-    hibernate.enable = false;
-    hybrid-sleep.enable = false;
-  };
+  # systemd.targets = {
+  #   hibernate.enable = false;
+  #   hybrid-sleep.enable = false;
+  # };
 
   # Plymouth
   boot.plymouth = {

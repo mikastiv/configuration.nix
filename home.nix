@@ -41,6 +41,7 @@
     ".config/starship.toml".source = dotfiles/starship/starship.toml;
     ".config/autostart/OpenRGB.desktop".source = dotfiles/OpenRGB/OpenRGB.desktop;
     ".config/OpenRGB/mikastiv.orp".source = dotfiles/OpenRGB/mikastiv.orp;
+    ".ssh/config".source = dotfiles/ssh/config;
     ".zig-completions" = {
       source = zig-completions;
       recursive = true;
@@ -152,6 +153,16 @@
     git = {
       enable = true;
       lfs.enable = true;
+      signing = {
+        format = "ssh";
+        key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICTRFw7gvXr/DU24t69Tex3Xw7jtEM2RSkU60OmKr+41";
+        signByDefault = true;
+        signer = "/run/current-system/sw/bin/op-ssh-sign";
+      };
+      ignores = [
+        "*.swp"
+        ".direnv"
+      ];
       settings = {
         user = {
           email = "mikastiv@outlook.com";
@@ -192,9 +203,6 @@
           missingCommitsCheck = "warn";
         };
         rerere.enable = true;
-        commit.gpgsign = true;
-        gpg.format = "ssh";
-        user.signingKey = "/home/${username}/.ssh/id_ed25519_sign.pub";
         core = {
           compression = 9;
           whitespace = "trailing-space,space-before-tab";
@@ -207,10 +215,6 @@
           showUntrackedFiles = "all";
         };
       };
-      ignores = [
-        "*.swp"
-        ".direnv"
-      ];
     };
   };
 
