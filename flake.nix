@@ -11,7 +11,7 @@
     };
 
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.3";
+      url = "github:nix-community/lanzaboote/v1.0.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -100,8 +100,12 @@
               ];
 
               boot.loader.systemd-boot.enable = lib.mkForce false;
-              boot.lanzaboote.enable = true;
-              boot.lanzaboote.pkiBundle = "/var/lib/sbctl";
+              boot.lanzaboote = {
+                enable = true;
+                pkiBundle = "/var/lib/sbctl";
+                autoGenerateKeys.enable = true;
+                autoEnrollKeys.enable = true;
+              };
             }
           )
         ];

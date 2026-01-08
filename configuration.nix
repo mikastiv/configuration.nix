@@ -30,10 +30,10 @@
   };
 
   # Disable hibernate
-  # systemd.targets = {
-  #   hibernate.enable = false;
-  #   hybrid-sleep.enable = false;
-  # };
+  systemd.targets = {
+    hibernate.enable = false;
+    hybrid-sleep.enable = false;
+  };
 
   # Plymouth
   boot.plymouth = {
@@ -110,15 +110,12 @@
     isNormalUser = true;
     description = "${username}";
     extraGroups = [ "networkmanager" "wheel" "input" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    packages = [];
   };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  ];
+  environment.systemPackages = [];
 
   # Use zsh
   programs.zsh.enable = true;
