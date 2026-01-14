@@ -15,11 +15,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     helix = {
       url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,7 +32,6 @@
       nixpkgs-unstable,
       home-manager,
       lanzaboote,
-      nur,
       helix,
       zig-completions,
       ...
@@ -50,7 +44,7 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [ nur.overlays.default ];
+        overlays = [];
       };
 
       unstablePkgs = import nixpkgs-unstable {

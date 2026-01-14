@@ -16,7 +16,6 @@
     unstablePkgs.godot
     unstablePkgs.ida-free
     unstablePkgs.renderdoc
-    brave
     discord
     ghidra
     heroic
@@ -102,22 +101,15 @@
       };
     };
 
-    librewolf = {
+    chromium = {
       enable = true;
-      profiles.${username} = {
-        isDefault = true;
-        extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
-          onepassword-password-manager
-          darkreader
-          decentraleyes
-          privacy-badger
-        ];
-      };
-      settings = {
-        "browser.startup.page" = 3; # Restore previous session
-        "browser.sessionstore.resume_from_crash" = true;
-        "browser.sessionstore.resume_session_once" = false;
-      };
+      extensions = [
+        { id = "ddkjiahejlhfcafbddmgiahcphecmpfh"; } # ublock origin lite
+        { id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa"; } # 1password
+        { id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; } # dark reader
+        { id = "ldpochfccmkkmhdbclfhpagapcfdljkj"; } # decentraleyes
+        { id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"; } # privacy badger
+      ];
     };
 
     zsh = {
