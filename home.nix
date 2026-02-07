@@ -48,6 +48,9 @@
   };
 
   home.sessionPath = [ ];
+  home.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
 
   xdg = {
     userDirs = {
