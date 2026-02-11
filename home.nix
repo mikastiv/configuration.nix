@@ -112,6 +112,7 @@
         { id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; } # dark reader
         { id = "ldpochfccmkkmhdbclfhpagapcfdljkj"; } # decentraleyes
         { id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"; } # privacy badger
+        { id = "ponfpcnoihfmfllpaingbgckeeldkhle"; } # enhancer for youtube
       ];
     };
 
