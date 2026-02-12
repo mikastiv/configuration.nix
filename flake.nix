@@ -44,7 +44,7 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [];
+        overlays = [ ];
       };
 
       unstablePkgs = import nixpkgs-unstable {
@@ -70,6 +70,7 @@
           ./modules/plasma.nix
           ./modules/1password.nix
           ./modules/steam.nix
+          ./modules/chromium.nix
 
           home-manager.nixosModules.home-manager
           {

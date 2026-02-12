@@ -104,18 +104,6 @@
       };
     };
 
-    chromium = {
-      enable = true;
-      extensions = [
-        { id = "ddkjiahejlhfcafbddmgiahcphecmpfh"; } # ublock origin lite
-        { id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa"; } # 1password
-        { id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; } # dark reader
-        { id = "ldpochfccmkkmhdbclfhpagapcfdljkj"; } # decentraleyes
-        { id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp"; } # privacy badger
-        { id = "ponfpcnoihfmfllpaingbgckeeldkhle"; } # enhancer for youtube
-      ];
-    };
-
     zsh = {
       enable = true;
       autosuggestion.enable = true;
