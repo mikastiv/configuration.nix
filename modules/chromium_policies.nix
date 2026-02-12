@@ -15,6 +15,7 @@
       "DefaultSearchProviderNewTabURL" = "https://duckduckgo.com/chrome_newtab";
 
       "PasswordManagerEnabled" = false;
+      "BookmarkBarEnabled" = true;
     };
     extensions = [
       # "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
