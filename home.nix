@@ -1,6 +1,7 @@
 {
   pkgs,
   unstablePkgs,
+  lib,
   username,
   helix,
   zig-completions,
@@ -15,16 +16,16 @@
     unstablePkgs.ftb-app
     unstablePkgs.godot
     unstablePkgs.ida-free
-    unstablePkgs.renderdoc
     discord
     ghidra
     heroic
+    mupen64plus
     nil
     nixfmt
-    mupen64plus
     ncdu
     poop
     qmk
+    renderdoc
     scc
     vlc
     wl-clipboard
@@ -137,6 +138,71 @@
     diff-so-fancy = {
       enable = true;
       enableGitIntegration = true;
+    };
+
+    chromium = rec {
+      enable = true;
+      package = pkgs.ungoogled-chromium;
+      extensions =
+        let
+          createChromiumExtensionFor =
+            browserVersion:
+            {
+              id,
+              sha256,
+              version,
+            }:
+            {
+              inherit id;
+              inherit version;
+              crxPath = builtins.fetchurl {
+                url = "https://clients2.google.com/service/update2/crx?response=redirect&acceptformat=crx2,crx3&prodversion=${browserVersion}&x=id%3D${id}%26installsource%3Dondemand%26uc";
+                name = "${id}.crx";
+                inherit sha256;
+              };
+            };
+          createChromiumExtension = createChromiumExtensionFor (
+            lib.versions.major package.version
+          );
+        in
+        [
+          (createChromiumExtension {
+            # ublock origin
+            id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";
+            sha256 = "sha256:0ksbby7sim15b6ym8m3yjw3zz0942r9sg43grqpv1cckb55c4ha8";
+            version = "1.69.0";
+          })
+          (createChromiumExtension {
+            # 1password
+            id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";
+            sha256 = "sha256:0xza50c07c7k8v5h2sgyb2x2q2fkyqnwixg1999dd8qaaixp6fxw";
+            version = "8.12.1.3";
+          })
+          (createChromiumExtension {
+            # dark reader
+            id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
+            sha256 = "sha256:1hanyryhp6a78371f5wz281h6p0bmrb5vkrfr21vjhx4sy78wrch";
+            version = "4.9.120";
+          })
+          (createChromiumExtension {
+            # decentraleyes
+            id = "ldpochfccmkkmhdbclfhpagapcfdljkj";
+            sha256 = "sha256:198k1hyzf3a1yz4chnx095rwqa15hkcck4ir6xs6ps29qgqw8ili";
+            version = "3.0.0";
+          })
+          (createChromiumExtension {
+            # privacy badger
+            id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp";
+            sha256 = "sha256:0sw9f6xvck6f3jdx733nrrnrqpzcn7b4h9wmdd4an76dilhfw9n7";
+            version = "2025.12.9";
+          })
+          (createChromiumExtension {
+            # enhancer for youtube
+            id = "ponfpcnoihfmfllpaingbgckeeldkhle";
+            sha256 = "sha256:0j0nhyhzwhrmbc3mw67vykh5ccwgg70w3xxv1pwzl414xvr371mg";
+            version = "3.0.16";
+          })
+        ];
     };
 
     git = {

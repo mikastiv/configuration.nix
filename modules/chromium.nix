@@ -1,8 +1,6 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-  environment.systemPackages = with pkgs; [ ungoogled-chromium ];
-
   programs.chromium = {
     enable = true;
     extraOpts = {
