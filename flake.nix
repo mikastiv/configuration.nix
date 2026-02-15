@@ -24,6 +24,11 @@
       url = "git+https://codeberg.org/ziglang/shell-completions";
       flake = false;
     };
+
+    ziginit = {
+      url = "git+https://codeberg.org/mikastiv/ziginit";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -34,6 +39,7 @@
       lanzaboote,
       helix,
       zig-completions,
+      ziginit,
       ...
     }@inputs:
     let
@@ -83,6 +89,7 @@
               inherit unstablePkgs;
               inherit helix;
               inherit zig-completions;
+              inherit ziginit;
             };
           }
 

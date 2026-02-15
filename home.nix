@@ -5,6 +5,7 @@
   username,
   helix,
   zig-completions,
+  ziginit,
   ...
 }:
 
@@ -27,9 +28,11 @@
     qmk
     renderdoc
     scc
+    unzip
     vlc
     wl-clipboard
     yt-dlp
+    ziginit.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   home.file = {
