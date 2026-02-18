@@ -179,14 +179,14 @@ in
           (createChromiumExtension {
             # 1password
             id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";
-            sha256 = "sha256:0xza50c07c7k8v5h2sgyb2x2q2fkyqnwixg1999dd8qaaixp6fxw";
-            version = "8.12.1.3";
+            sha256 = "sha256:1ry8h3as008b9d9jr3q9jaqxxfnvylalp3jcsyd21ap8khzs1p2p";
+            version = "8.12.2.37";
           })
           (createChromiumExtension {
             # dark reader
             id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
-            sha256 = "sha256:1hanyryhp6a78371f5wz281h6p0bmrb5vkrfr21vjhx4sy78wrch";
-            version = "4.9.120";
+            sha256 = "sha256:0zfcdcxdq98qqa1ad3w1bpnzald54d99hb6mv9zhpzgk7zgcrlm8";
+            version = "4.9.121";
           })
           (createChromiumExtension {
             # decentraleyes
