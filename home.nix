@@ -9,6 +9,9 @@
   ...
 }:
 
+let
+  chromiumPkg = pkgs.ungoogled-chromium;
+in
 {
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
@@ -143,9 +146,9 @@
       enableGitIntegration = true;
     };
 
-    chromium = rec {
+    chromium = {
       enable = true;
-      package = pkgs.ungoogled-chromium;
+      package = chromiumPkg;
       extensions =
         let
           createChromiumExtensionFor =
@@ -164,9 +167,7 @@
                 inherit sha256;
               };
             };
-          createChromiumExtension = createChromiumExtensionFor (
-            lib.versions.major package.version
-          );
+          createChromiumExtension = createChromiumExtensionFor (lib.versions.major chromiumPkg.version);
         in
         [
           (createChromiumExtension {
