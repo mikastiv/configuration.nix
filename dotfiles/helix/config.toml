@@ -28,12 +28,10 @@ display-progress-messages = true
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 
 [keys.normal]
-C-h = "jump_view_left"
-C-j = "jump_view_down"
-C-k = "jump_view_up"
-C-l = "jump_view_right"
-A-l = ":buffer-next"
-A-h = ":buffer-previous"
+A-h = "jump_view_left"
+A-l = "jump_view_right"
+C-l = ":buffer-next"
+C-h = ":buffer-previous"
 C-d = ["page_cursor_half_down", "align_view_center"]
 C-u = ["page_cursor_half_up", "align_view_center"]
 C-m = "save_selection"

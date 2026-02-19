@@ -31,6 +31,7 @@ in
     qmk
     renderdoc
     scc
+    slides
     unzip
     vlc
     wl-clipboard
