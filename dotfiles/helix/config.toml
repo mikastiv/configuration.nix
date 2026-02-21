@@ -40,6 +40,8 @@ C-q = ":buffer-close"
 ret = ["open_below", "normal_mode"]
 S-ret = ["open_above", "normal_mode"]
 X = "extend_line_above"
+"=" = ":format"
+
 # Move lines up and down
 A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
