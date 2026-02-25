@@ -25,7 +25,7 @@ display-progress-messages = true
 # display-inlay-hints = true
 
 [editor.statusline]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = ["diagnostics", "selections", "register", "position", "file-encoding", "file-line-ending", "file-type"]
 
 [keys.normal]
 A-h = "jump_view_left"

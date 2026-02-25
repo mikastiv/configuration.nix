@@ -75,7 +75,11 @@ in
     bat.enable = true;
     ripgrep.enable = true;
     fastfetch.enable = true;
-    starship.enable = true;
+
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+    };
 
     direnv = {
       enable = true;
