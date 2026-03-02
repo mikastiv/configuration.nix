@@ -29,6 +29,11 @@
       url = "git+https://codeberg.org/mikastiv/ziginit";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    crx-updater = {
+      url = "git+https://codeberg.org/mikastiv/crx-updater";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -40,6 +45,7 @@
       helix,
       zig-completions,
       ziginit,
+      crx-updater,
       ...
     }@inputs:
     let
@@ -90,6 +96,7 @@
               inherit helix;
               inherit zig-completions;
               inherit ziginit;
+              inherit crx-updater;
             };
           }
 

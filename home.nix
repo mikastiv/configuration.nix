@@ -6,6 +6,7 @@
   helix,
   zig-completions,
   ziginit,
+  crx-updater,
   ...
 }:
 
@@ -36,6 +37,8 @@ in
     vlc
     wl-clipboard
     yt-dlp
+
+    crx-updater.packages.${pkgs.stdenv.hostPlatform.system}.default
     ziginit.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
@@ -184,8 +187,8 @@ in
           (createChromiumExtension {
             # 1password
             id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";
-            sha256 = "sha256:1ry8h3as008b9d9jr3q9jaqxxfnvylalp3jcsyd21ap8khzs1p2p";
-            version = "8.12.2.37";
+            sha256 = "sha256:1ah104pi2sm3j4b4a16x1v5g4jx928lvyv8dncnbjvnrnphdadyp";
+            version = "8.12.4.46";
           })
           (createChromiumExtension {
             # dark reader
@@ -202,8 +205,8 @@ in
           (createChromiumExtension {
             # privacy badger
             id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp";
-            sha256 = "sha256:0sw9f6xvck6f3jdx733nrrnrqpzcn7b4h9wmdd4an76dilhfw9n7";
-            version = "2025.12.9";
+            sha256 = "sha256:0xl9zqmm92g03c39aqgrpzkvk8k9r376amx2x5z3sip89sy7daa8";
+            version = "2026.2.20";
           })
           (createChromiumExtension {
             # enhancer for youtube
