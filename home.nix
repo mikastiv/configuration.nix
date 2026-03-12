@@ -4,6 +4,7 @@
   lib,
   username,
   helix,
+  ghostty,
   zig-completions,
   ziginit,
   crx-updater,
@@ -21,6 +22,7 @@ in
     unstablePkgs.ftb-app
     unstablePkgs.godot
     unstablePkgs.ida-free
+    unstablePkgs.renderdoc
     discord
     ghidra
     heroic
@@ -29,8 +31,8 @@ in
     nixfmt
     ncdu
     poop
+    psmisc
     qmk
-    renderdoc
     scc
     slides
     unzip
@@ -99,7 +101,7 @@ in
     ghostty = {
       enable = true;
       installBatSyntax = true;
-      package = unstablePkgs.ghostty;
+      package = ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
 
     helix = {
