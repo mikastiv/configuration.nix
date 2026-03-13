@@ -23,22 +23,22 @@ in
     unstablePkgs.godot
     unstablePkgs.ida-free
     unstablePkgs.renderdoc
-    discord
     ghidra
     heroic
     mupen64plus
     nil
     nixfmt
     ncdu
+    poppler
     poop
     psmisc
     qmk
     scc
     slides
-    unzip
     vlc
     wl-clipboard
     yt-dlp
+    _7zz
 
     crx-updater.packages.${pkgs.stdenv.hostPlatform.system}.default
     ziginit.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -75,11 +75,14 @@ in
   };
 
   programs = {
-    lazygit.enable = true;
-    btop.enable = true;
     bat.enable = true;
-    ripgrep.enable = true;
+    btop.enable = true;
+    discord.enable = true;
     fastfetch.enable = true;
+    fd.enable = true;
+    jq.enable = true;
+    lazygit.enable = true;
+    ripgrep.enable = true;
 
     starship = {
       enable = true;
@@ -108,6 +111,11 @@ in
       enable = true;
       defaultEditor = true;
       package = helix.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    };
+
+    yazi = {
+      enable = true;
+      enableZshIntegration = true;
     };
 
     thunderbird = {
