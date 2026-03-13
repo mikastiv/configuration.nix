@@ -21,7 +21,7 @@
     };
 
     ghostty = {
-      url = "github:ghostty-org/ghostty/v1.3.0";
+      url = "github:ghostty-org/ghostty/v1.3.1";
     };
 
     zig-completions = {
