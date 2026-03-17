@@ -1,7 +1,7 @@
 theme = "ocean-space"
 
 [editor]
-bufferline = "always"
+bufferline = "multiple"
 cursorline = true
 end-of-line-diagnostics = "hint"
 line-number = "relative"

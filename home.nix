@@ -191,14 +191,14 @@ in
           (createChromiumExtension {
             # ublock origin
             id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";
-            sha256 = "sha256:0ksbby7sim15b6ym8m3yjw3zz0942r9sg43grqpv1cckb55c4ha8";
-            version = "1.69.0";
+            sha256 = "sha256:0sf88f9wpf300v02k40i9sda6wysvlgf4smmggf6awpwb1hyd1hl";
+            version = "1.70.0";
           })
           (createChromiumExtension {
             # 1password
             id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";
-            sha256 = "sha256:1ah104pi2sm3j4b4a16x1v5g4jx928lvyv8dncnbjvnrnphdadyp";
-            version = "8.12.4.46";
+            sha256 = "sha256:1i89s0cbbgsyzm72g52ca273sdhj3qmjfmxap57spkmyqyp4rmxp";
+            version = "8.12.6.39";
           })
           (createChromiumExtension {
             # dark reader
@@ -221,8 +221,8 @@ in
           (createChromiumExtension {
             # enhancer for youtube
             id = "ponfpcnoihfmfllpaingbgckeeldkhle";
-            sha256 = "sha256:0j0nhyhzwhrmbc3mw67vykh5ccwgg70w3xxv1pwzl414xvr371mg";
-            version = "3.0.16";
+            sha256 = "sha256:0sdn9ardadknc2qpbxyc3sr6y6wdpgzncmr2alwrzz7a29gml1y7";
+            version = "3.0.17";
           })
         ];
     };
