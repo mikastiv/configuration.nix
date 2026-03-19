@@ -224,6 +224,12 @@ in
             sha256 = "sha256:0sdn9ardadknc2qpbxyc3sr6y6wdpgzncmr2alwrzz7a29gml1y7";
             version = "3.0.17";
           })
+          (createChromiumExtension {
+            # nordvpn
+            id = "fjoaledfpmneenckfbpdfhkmimnjocfa";
+            sha256 = "sha256:1rnj79yfqrsqp028p18qav7lnqi9nwhrihxchvdcvrx3mh4k5mbp";
+            version = "5.4.1";
+          })
         ];
     };
 

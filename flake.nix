@@ -88,6 +88,7 @@
           ./modules/1password.nix
           ./modules/steam.nix
           ./modules/chromium_policies.nix
+          ./modules/clamav.nix
 
           home-manager.nixosModules.home-manager
           {
