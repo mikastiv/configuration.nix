@@ -197,8 +197,8 @@ in
           (createChromiumExtension {
             # 1password
             id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";
-            sha256 = "sha256:1i89s0cbbgsyzm72g52ca273sdhj3qmjfmxap57spkmyqyp4rmxp";
-            version = "8.12.6.39";
+            sha256 = "sha256:0p5plr7qyi4l16803adv0bqqmxrjzsa7lj60jzx7d6ln33k3wmlk";
+            version = "8.12.8.26";
           })
           (createChromiumExtension {
             # dark reader
