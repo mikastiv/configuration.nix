@@ -25,11 +25,11 @@
         "zls": "zls"
       },
       "locked": {
-        "lastModified": 1772433699,
-        "narHash": "sha256-EiGa94J/G3a4iuQ/o8Igudght2x7mBsyd5cyAVjhILs=",
+        "lastModified": 1776212057,
+        "narHash": "sha256-8lS3HR1M6Htzyla1sSQHx8PNbHaYTRPm1yCwAtGct/4=",
         "ref": "refs/heads/main",
-        "rev": "f676f9899fec9231def56064d4e478142be021ab",
-        "revCount": 10,
+        "rev": "62cb4b65e080c1858e7c53dc276cd4a57b91bc3b",
+        "revCount": 11,
         "type": "git",
         "url": "https://codeberg.org/mikastiv/crx-updater"
       },
@@ -277,11 +277,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1772653894,
-        "narHash": "sha256-/8hQLVH3X7I6Rr62V2cL01NkLYh3YHJ6kZB2fY6IysE=",
+        "lastModified": 1775655127,
+        "narHash": "sha256-+VP7mjmfD0J4dQYjwA1Co1WK0FiuOYT2fEMv2DhLhx0=",
         "owner": "helix-editor",
         "repo": "helix",
-        "rev": "51ec572a27a8c1267afbc07e6c1583585c6363dc",
+        "rev": "03d2b4a7ab8e592817cca8e66bd8a32023103698",
         "type": "github"
       },
       "original": {
@@ -318,11 +318,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772985280,
-        "narHash": "sha256-FdrNykOoY9VStevU4zjSUdvsL9SzJTcXt4omdEDZDLk=",
+        "lastModified": 1775425411,
+        "narHash": "sha256-KY6HsebJHEe5nHOWP7ur09mb0drGxYSzE3rQxy62rJo=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "8f736f007139d7f70752657dff6a401a585d6cbc",
+        "rev": "0d02ec1d0a05f88ef9e74b516842900c41f0f2fe",
         "type": "github"
       },
       "original": {
@@ -371,11 +371,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1772771118,
-        "narHash": "sha256-xWzaTvmmACR/SRWtABgI/Z97lcqwJAeoSd5QW1KdK1s=",
+        "lastModified": 1775639890,
+        "narHash": "sha256-9O9gNidrdzcb7vgKGtff7QiLtr0IsVaCi0pAXm8anhQ=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e38213b91d3786389a446dfce4ff5a8aaf6012f2",
+        "rev": "456e8a9468b9d46bd8c9524425026c00745bc4d2",
         "type": "github"
       },
       "original": {
@@ -387,11 +387,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1772822230,
-        "narHash": "sha256-yf3iYLGbGVlIthlQIk5/4/EQDZNNEmuqKZkQssMljuw=",
+        "lastModified": 1775525138,
+        "narHash": "sha256-BQb70+B378ECLO8iQT3P/b1hCC5/CJVHZdeulY8futc=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "71caefce12ba78d84fe618cf61644dce01cf3a96",
+        "rev": "d96b37bbeb9840f1c0ebfe90585ef5067b69bbb3",
         "type": "github"
       },
       "original": {
@@ -445,11 +445,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1759631821,
-        "narHash": "sha256-V8A1L0FaU/aSXZ1QNJScxC12uP4hANeRBgI4YdhHeRM=",
+        "lastModified": 1775358767,
+        "narHash": "sha256-f2eC+WIfhjevCPQILuV08i/kmKZzYZpUvkom/33VxCA=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "1d7cbdaad90f8a5255a89a6eddd8af24dc89cafe",
+        "rev": "20fd44bc663daa53a2575e01293e24e681d62244",
         "type": "github"
       },
       "original": {
@@ -732,11 +732,11 @@
         "zls": "zls_2"
       },
       "locked": {
-        "lastModified": 1772433843,
-        "narHash": "sha256-njjuAIKtYGSj4bGEJqo1i525QffRwS/22/0reFn3Umg=",
+        "lastModified": 1775520736,
+        "narHash": "sha256-HGJtsnAGxbgDRnRblA8Jwm53ej3MxQDiHl2H5DZJPm8=",
         "ref": "refs/heads/main",
-        "rev": "b1d7fd09cc4c446aaf662e177fad1a9ce89969c4",
-        "revCount": 8,
+        "rev": "971f0ef9e3cb22770784f75db355488fcbddc21b",
+        "revCount": 9,
         "type": "git",
         "url": "https://codeberg.org/mikastiv/ziginit"
       },

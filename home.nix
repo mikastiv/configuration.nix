@@ -197,14 +197,14 @@ in
           (createChromiumExtension {
             # 1password
             id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";
-            sha256 = "sha256:0p5plr7qyi4l16803adv0bqqmxrjzsa7lj60jzx7d6ln33k3wmlk";
-            version = "8.12.8.26";
+            sha256 = "sha256:1c28dwgdbrh36cd5h7qd239pp0rj0i77pf22iwgk7xjsgxz60w7r";
+            version = "8.12.10.36";
           })
           (createChromiumExtension {
             # dark reader
             id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
-            sha256 = "sha256:0zfcdcxdq98qqa1ad3w1bpnzald54d99hb6mv9zhpzgk7zgcrlm8";
-            version = "4.9.121";
+            sha256 = "sha256:03qg9wmhq408d1hvmkmlfg6wz82g9l37bqhqpr28jaxlq7g32n7s";
+            version = "4.9.124";
           })
           (createChromiumExtension {
             # decentraleyes
@@ -227,8 +227,8 @@ in
           (createChromiumExtension {
             # nordvpn
             id = "fjoaledfpmneenckfbpdfhkmimnjocfa";
-            sha256 = "sha256:1rnj79yfqrsqp028p18qav7lnqi9nwhrihxchvdcvrx3mh4k5mbp";
-            version = "5.4.1";
+            sha256 = "sha256:0issyq0jfc90sfy3hq7r3wmw7gv251sy4dblqg59kkv15pp9blm4";
+            version = "5.4.3";
           })
         ];
     };
