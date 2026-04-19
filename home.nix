@@ -227,8 +227,8 @@ in
           (createChromiumExtension {
             # nordvpn
             id = "fjoaledfpmneenckfbpdfhkmimnjocfa";
-            sha256 = "sha256:0issyq0jfc90sfy3hq7r3wmw7gv251sy4dblqg59kkv15pp9blm4";
-            version = "5.4.3";
+            sha256 = "sha256:1q0adad91kkfxg0vzrhawb0nna3f9gxcgglmc1gdzzcjsj4gprgq";
+            version = "5.5.0";
           })
         ];
     };
