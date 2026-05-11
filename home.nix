@@ -197,20 +197,20 @@ in
           (createChromiumExtension {
             # 1password
             id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";
-            sha256 = "sha256:1c28dwgdbrh36cd5h7qd239pp0rj0i77pf22iwgk7xjsgxz60w7r";
-            version = "8.12.10.36";
+            sha256 = "sha256:0pii82j1zs36b63q8sa19rhgx2ak8bypmwafrbm7m1v168jw9kyg";
+            version = "8.12.12.44";
           })
           (createChromiumExtension {
             # dark reader
             id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
-            sha256 = "sha256:03qg9wmhq408d1hvmkmlfg6wz82g9l37bqhqpr28jaxlq7g32n7s";
-            version = "4.9.124";
+            sha256 = "sha256:05khd2bjdzfa2101gv11fmqc1lrsd115axpjx6gphw3f4n1nj24c";
+            version = "4.9.125";
           })
           (createChromiumExtension {
             # decentraleyes
             id = "ldpochfccmkkmhdbclfhpagapcfdljkj";
-            sha256 = "sha256:198k1hyzf3a1yz4chnx095rwqa15hkcck4ir6xs6ps29qgqw8ili";
-            version = "3.0.0";
+            sha256 = "sha256:0k4rxywbr4cgp03wsz51g8x127s4g0a7hkb5g4ygzmp2n8npn9ab";
+            version = "3.0.1";
           })
           (createChromiumExtension {
             # privacy badger
@@ -227,8 +227,8 @@ in
           (createChromiumExtension {
             # nordvpn
             id = "fjoaledfpmneenckfbpdfhkmimnjocfa";
-            sha256 = "sha256:1q0adad91kkfxg0vzrhawb0nna3f9gxcgglmc1gdzzcjsj4gprgq";
-            version = "5.5.0";
+            sha256 = "sha256:15w901mf3d4v6mkb992k69dq5d1a61yh6q5abfd07vrvin5n3c4n";
+            version = "5.5.1";
           })
         ];
     };
