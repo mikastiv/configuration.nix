@@ -25,6 +25,7 @@ in
     unstablePkgs.renderdoc
     ghidra
     heroic
+    kicad
     mupen64plus
     nil
     nixfmt
