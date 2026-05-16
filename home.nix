@@ -22,10 +22,12 @@ in
     unstablePkgs.ftb-app
     unstablePkgs.godot
     unstablePkgs.ida-free
+    unstablePkgs.kicad
     unstablePkgs.renderdoc
+    amdgpu_top
+    dolphin-emu
     ghidra
     heroic
-    kicad
     mupen64plus
     nil
     nixfmt
@@ -239,7 +241,7 @@ in
       lfs.enable = true;
       signing = {
         format = "ssh";
-        key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICTRFw7gvXr/DU24t69Tex3Xw7jtEM2RSkU60OmKr+41";
+        key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDcstB52WoNWkQvMLo1zGapsZRJIsTZrEqcg8265KsO/";
         signByDefault = true;
         signer = "/run/current-system/sw/bin/op-ssh-sign";
       };
