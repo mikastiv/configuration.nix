@@ -25,11 +25,11 @@
         "zls": "zls"
       },
       "locked": {
-        "lastModified": 1776556911,
-        "narHash": "sha256-sCXeu37UktDU7osnaaS2g982LZjFMVaZTcCcUZIyi1g=",
+        "lastModified": 1779424139,
+        "narHash": "sha256-3ZZ4dfH6Vzc9ZxO15JdS7tlsR47kahklDLe3Dz0uApY=",
         "ref": "refs/heads/main",
-        "rev": "ee01bcdfb03be92afb444c140af7c99a945cf4b7",
-        "revCount": 12,
+        "rev": "2edf8d801212a3ef0ddfcdd1f761d296f9077f30",
+        "revCount": 13,
         "type": "git",
         "url": "https://codeberg.org/mikastiv/crx-updater"
       },

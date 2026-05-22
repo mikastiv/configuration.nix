@@ -194,14 +194,14 @@ in
           (createChromiumExtension {
             # ublock origin
             id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";
-            sha256 = "sha256:0sf88f9wpf300v02k40i9sda6wysvlgf4smmggf6awpwb1hyd1hl";
-            version = "1.70.0";
+            sha256 = "sha256:071w6aivwfdbjgkc40ydm1h6mjwljjdg568d9bcbkvisxjqmz7al";
+            version = "1.71.0";
           })
           (createChromiumExtension {
             # 1password
             id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";
-            sha256 = "sha256:0pii82j1zs36b63q8sa19rhgx2ak8bypmwafrbm7m1v168jw9kyg";
-            version = "8.12.12.44";
+            sha256 = "sha256:1f3lln0bcczrvznhr405y9m9p98l5c0vmk8ww81bqp8vvniw9jcf";
+            version = "8.12.21.1";
           })
           (createChromiumExtension {
             # dark reader
@@ -230,8 +230,8 @@ in
           (createChromiumExtension {
             # nordvpn
             id = "fjoaledfpmneenckfbpdfhkmimnjocfa";
-            sha256 = "sha256:15w901mf3d4v6mkb992k69dq5d1a61yh6q5abfd07vrvin5n3c4n";
-            version = "5.5.1";
+            sha256 = "sha256:19amh9a1hs81i1b1dkc6ajqia61bmhf9x2apg373gf9z4z03fzqc";
+            version = "5.6.0";
           })
         ];
     };
@@ -255,7 +255,7 @@ in
           name = "mikastiv";
         };
         init.defaultBranch = "main";
-        branch.sort = "-commiterdate";
+        branch.sort = "-committerdate";
         tag.sort = "-taggerdate";
         blame.date = "relative";
         log = {
