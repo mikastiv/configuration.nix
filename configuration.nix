@@ -2,19 +2,29 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, host, username, ... }:
+{
+  pkgs,
+  host,
+  username,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
     auto-optimise-store = true;
     download-buffer-size = 268435500; # 256 Mib
   };
+
+  # Garbage collect
   nix.gc = {
     automatic = true;
     dates = "weekly";
@@ -77,7 +87,10 @@
   services.fstrim.enable = true;
 
   # OpenRGB
-  services.hardware.openrgb.enable = true;
+  services.hardware.openrgb = {
+    enable = true;
+    package = pkgs.openrgb-with-all-plugins;
+  };
 
   # Audio with pipewire
   services.pulseaudio.enable = false;
@@ -109,13 +122,17 @@
   users.users.${username} = {
     isNormalUser = true;
     description = "${username}";
-    extraGroups = [ "networkmanager" "wheel" "input" ];
-    packages = [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "input"
+    ];
+    packages = [ ];
   };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = [];
+  environment.systemPackages = [ ];
 
   # Use zsh
   programs.zsh.enable = true;

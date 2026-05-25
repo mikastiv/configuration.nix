@@ -24,11 +24,6 @@
       url = "github:ghostty-org/ghostty/v1.3.1";
     };
 
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     zig-completions = {
       url = "git+https://codeberg.org/ziglang/shell-completions";
       flake = false;
@@ -53,7 +48,6 @@
       lanzaboote,
       helix,
       ghostty,
-      nur,
       zig-completions,
       ziginit,
       crx-updater,
@@ -67,7 +61,7 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [ nur.overlays.default ];
+        overlays = [ ];
       };
 
       unstablePkgs = import nixpkgs-unstable {

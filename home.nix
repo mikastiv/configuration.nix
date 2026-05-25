@@ -167,39 +167,6 @@ in
       enableGitIntegration = true;
     };
 
-    librewolf = {
-      enable = true;
-      profiles.${username} = {
-        isDefault = true;
-        settings = {
-          "browser.startup.page" = 3; # Restore previous session
-          "browser.sessionstore.resume_from_crash" = true;
-          "browser.sessionstore.resume_session_once" = false;
-          "librewolf.webgl.prompt" = true;
-          # "privacy.trackingprotection.allow_list.baseline.enabled" = true;
-        };
-        extensions = {
-          force = true;
-          packages = with pkgs.nur.repos.rycee.firefox-addons; [
-            ublock-origin
-            onepassword-password-manager
-            darkreader
-            decentraleyes
-            privacy-badger
-          ];
-          settings."uBlock0@raymondhill.net".settings = {
-            selectedFilterLists = [
-              "ublock-filters"
-              "ublock-badware"
-              "ublock-privacy"
-              "ublock-unbreak"
-              "ublock-quick-fixes"
-            ];
-          };
-        };
-      };
-    };
-
     chromium = {
       enable = true;
       package = chromiumPkg;
