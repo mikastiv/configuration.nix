@@ -522,11 +522,11 @@
         "zls": "zls"
       },
       "locked": {
-        "lastModified": 1779705436,
-        "narHash": "sha256-JDRA7xpXeIzhklHY01xhP+uVfq3WPoef1eHxI3DWGgs=",
+        "lastModified": 1779719980,
+        "narHash": "sha256-6wmdMYlwvu4vordfSZsGPDJbyd2+ViRzRy2AQKGiHfk=",
         "ref": "refs/heads/main",
-        "rev": "cc37b6349930d2b393064bc5ad139a3dca87e164",
-        "revCount": 12,
+        "rev": "365e68f36e4b0104f0fc451925e7de2217b4c24f",
+        "revCount": 14,
         "type": "git",
         "url": "https://codeberg.org/mikastiv/ziginit"
       },
