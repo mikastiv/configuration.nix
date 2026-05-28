@@ -38,6 +38,7 @@ in
     qmk
     scc
     slides
+    tinyxxd
     vlc
     wl-clipboard
     yt-dlp
@@ -230,8 +231,14 @@ in
           (createChromiumExtension {
             # nordvpn
             id = "fjoaledfpmneenckfbpdfhkmimnjocfa";
-            sha256 = "sha256:19amh9a1hs81i1b1dkc6ajqia61bmhf9x2apg373gf9z4z03fzqc";
-            version = "5.6.0";
+            sha256 = "sha256:0cx2h5p50dna3q0aji8gy1nhffbcj6gi33r161hqxdn4g5bx8dm1";
+            version = "5.6.1";
+          })
+          (createChromiumExtension {
+            # 7TV
+            id = "ammjkodgmmoknidbanneddgankgfejfh";
+            sha256 = "sha256:116rxpgzr20argbmwsk4czrgi941h5671gqap9fbld142viy5hrx";
+            version = "3.1.22";
           })
         ];
     };
