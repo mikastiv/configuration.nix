@@ -431,11 +431,11 @@
         "zig-flake": "zig-flake_2"
       },
       "locked": {
-        "lastModified": 1779841972,
-        "narHash": "sha256-mFr3HdoWI4Ebg6xoQlDQpflJ49BghPYnY8ithEdyVgY=",
+        "lastModified": 1780170714,
+        "narHash": "sha256-iMPjbBYSgFLxUW4ZW5sNIi1rorq7VyZkGGgHYI86jcw=",
         "ref": "refs/heads/main",
-        "rev": "a9037f2ab38e054e6c5a0d238c3ccc305af2218a",
-        "revCount": 15,
+        "rev": "3f2e7aefb01a7b1df230959b425b92e66f9fe04f",
+        "revCount": 17,
         "type": "git",
         "url": "https://codeberg.org/mikastiv/ziginit"
       },
