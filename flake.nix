@@ -2,16 +2,11 @@
   description = "mikastiv's flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote/v1.0.0";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -45,7 +40,6 @@
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
-      lanzaboote,
       helix,
       ghostty,
       zig-completions,
@@ -70,7 +64,7 @@
       };
     in
     {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
         inherit system;
         inherit pkgs;
 
@@ -83,6 +77,7 @@
 
         modules = [
           ./configuration.nix
+          ./hardware-configuration.nix
 
           ./modules/plasma.nix
           ./modules/1password.nix
@@ -107,23 +102,6 @@
             };
           }
 
-          lanzaboote.nixosModules.lanzaboote
-          (
-            { pkgs, lib, ... }:
-            {
-              environment.systemPackages = [
-                pkgs.sbctl
-              ];
-
-              boot.loader.systemd-boot.enable = lib.mkForce false;
-              boot.lanzaboote = {
-                enable = true;
-                pkiBundle = "/var/lib/sbctl";
-                autoGenerateKeys.enable = true;
-                autoEnrollKeys.enable = true;
-              };
-            }
-          )
         ];
       };
     };

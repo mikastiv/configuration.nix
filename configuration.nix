@@ -10,11 +10,6 @@
 }:
 
 {
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-  ];
-
   nix.settings = {
     experimental-features = [
       "nix-command"
@@ -33,16 +28,23 @@
 
   # Bootloader.
   boot.loader = {
-    systemd-boot.enable = true;
-    systemd-boot.configurationLimit = 16;
+    limine = {
+      enable = true;
+      secureBoot.enable = true;
+      enrollConfig = true;
+      panicOnChecksumMismatch = true;
+      maxGenerations = 16;
+      extraEntries = ''
+        /Windows Boot Manager
+            protocol: efi
+            path: boot():/EFI/Microsoft/Boot/bootmgfw.efi
+      '';
+      style.wallpapers = [
+        pkgs.nixos-artwork.wallpapers.nineish-dark-gray.kdeFilePath
+      ];
+    };
     efi.canTouchEfiVariables = true;
     timeout = 30;
-  };
-
-  # Disable hibernate
-  systemd.targets = {
-    hibernate.enable = false;
-    hybrid-sleep.enable = false;
   };
 
   # Plymouth
@@ -53,6 +55,12 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # Disable hibernate
+  systemd.targets = {
+    hibernate.enable = false;
+    hybrid-sleep.enable = false;
+  };
 
   # Graphics
   hardware.graphics.enable = true;
@@ -132,7 +140,10 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = [ ];
+  environment.systemPackages = with pkgs; [
+    limine-full
+    sbctl
+  ];
 
   # Use zsh
   programs.zsh.enable = true;
