@@ -15,10 +15,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ghostty = {
-      url = "github:ghostty-org/ghostty/v1.3.1";
-    };
-
     zig-completions = {
       url = "git+https://codeberg.org/ziglang/shell-completions";
       flake = false;
@@ -41,7 +37,6 @@
       nixpkgs-unstable,
       home-manager,
       helix,
-      ghostty,
       zig-completions,
       ziginit,
       crx-updater,
@@ -95,7 +90,6 @@
               inherit username;
               inherit unstablePkgs;
               inherit helix;
-              inherit ghostty;
               inherit zig-completions;
               inherit ziginit;
               inherit crx-updater;

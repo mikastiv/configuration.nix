@@ -4,7 +4,6 @@
   lib,
   username,
   helix,
-  ghostty,
   zig-completions,
   ziginit,
   crx-updater,
@@ -52,7 +51,7 @@ in
     ".config/ncdu/config".source = dotfiles/ncdu/config;
     ".config/lazygit/config.yml".source = dotfiles/lazygit/config.yml;
     ".config/helix/config.toml".source = dotfiles/helix/config.toml;
-    ".config/helix/themes/ocean-space.toml".source = dotfiles/helix/themes/ocean-space.toml;
+    # ".config/helix/themes/ocean-space.toml".source = dotfiles/helix/themes/ocean-space.toml;
     ".config/ghostty/config".source = dotfiles/ghostty/config;
     ".config/starship.toml".source = dotfiles/starship/starship.toml;
     ".config/autostart/OpenRGB.desktop".source = dotfiles/OpenRGB/OpenRGB.desktop;
@@ -109,7 +108,7 @@ in
     ghostty = {
       enable = true;
       installBatSyntax = true;
-      package = ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
+      enableZshIntegration = true;
     };
 
     helix = {
@@ -142,7 +141,6 @@ in
       shellAliases = {
         ls = "eza";
         cat = "bat";
-        gl = "git log --all --graph --pretty=format:'%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n'";
         nix-rebuild = "sudo nixos-rebuild switch --flake /home/${username}/.flake#nixos";
       };
       completionInit = ''
@@ -270,19 +268,6 @@ in
         log = {
           abbrevCommit = true;
           graphColors = "blue,yellow,cyan,magenta,green,red";
-        };
-        "color \"decorate\"" = {
-          HEAD = "red";
-          branch = "blue";
-          tag = "yellow";
-          remoteBranch = "magenta";
-        };
-        "color \"branch\"" = {
-          current = "magenta";
-          local = "default";
-          remote = "yellow";
-          upstream = "green";
-          plain = "blue";
         };
         pull = {
           rebase = true;
