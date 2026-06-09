@@ -201,8 +201,8 @@ in
           (createChromiumExtension {
             # 1password
             id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";
-            sha256 = "sha256:1f3lln0bcczrvznhr405y9m9p98l5c0vmk8ww81bqp8vvniw9jcf";
-            version = "8.12.21.1";
+            sha256 = "sha256:0jx6fr78wmy2019jjbj4580m6061hfdcm7jajjqas7jsf7rn1fz9";
+            version = "8.12.22.17";
           })
           (createChromiumExtension {
             # dark reader
@@ -289,7 +289,7 @@ in
           preloadindex = true;
         };
         "url \"git@github.com:/\"".insteadOf = "gh:";
-        "url \"git@codeberg.com\"".insteadOf = "cb:";
+        "url \"git@codeberg.com:/\"".insteadOf = "cb:";
         status = {
           branch = true;
           showStash = true;
