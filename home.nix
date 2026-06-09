@@ -288,8 +288,8 @@ in
           whitespace = "trailing-space,space-before-tab";
           preloadindex = true;
         };
-        "url \"git@github.com:/\"".insteadOf = "gh:";
-        "url \"git@codeberg.com:/\"".insteadOf = "cb:";
+        "url \"git@github.com:\"".insteadOf = "gh:";
+        "url \"git@codeberg.org:\"".insteadOf = "cb:";
         status = {
           branch = true;
           showStash = true;
