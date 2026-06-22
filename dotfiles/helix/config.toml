@@ -12,7 +12,6 @@ indent-heuristic = "simple"
 continue-comments = false
 
 [editor.auto-pairs]
-'{' = '}'
 
 [editor.cursor-shape]
 insert = "bar"

@@ -13,5 +13,7 @@
     khelpcenter
     okular
     kate
+    ktexteditor
+    krdp
   ];
 }
