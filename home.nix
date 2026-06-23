@@ -202,14 +202,14 @@ in
           (createChromiumExtension {
             # 1password
             id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";
-            sha256 = "sha256:0jx6fr78wmy2019jjbj4580m6061hfdcm7jajjqas7jsf7rn1fz9";
-            version = "8.12.22.17";
+            sha256 = "sha256:08nzkcgcqpm71zrbn189aqpfm3ihy9wsplvcx36p3mw0c623zcna";
+            version = "8.12.24.34";
           })
           (createChromiumExtension {
             # dark reader
             id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
-            sha256 = "sha256:05khd2bjdzfa2101gv11fmqc1lrsd115axpjx6gphw3f4n1nj24c";
-            version = "4.9.125";
+            sha256 = "sha256:0lwamw0dmjvjjvcidsy2cmrh7azmbjgdrm6wm5ljlpirag0f5bg3";
+            version = "4.9.128";
           })
           (createChromiumExtension {
             # decentraleyes
@@ -220,8 +220,8 @@ in
           (createChromiumExtension {
             # privacy badger
             id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp";
-            sha256 = "sha256:0xl9zqmm92g03c39aqgrpzkvk8k9r376amx2x5z3sip89sy7daa8";
-            version = "2026.2.20";
+            sha256 = "sha256:0h4gs3yf5ryrk04djlvdn23mrppvnjjb04vawpw3zm4hlhwgmgxg";
+            version = "2026.6.16";
           })
           (createChromiumExtension {
             # enhancer for youtube
