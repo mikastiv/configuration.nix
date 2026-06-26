@@ -35,9 +35,9 @@ in
     poop
     psmisc
     qmk
-    scc
     slides
     tinyxxd
+    tokei
     vlc
     wl-clipboard
     yt-dlp
