@@ -38,6 +38,7 @@ in
     slides
     tinyxxd
     tokei
+    transcribe
     vlc
     wl-clipboard
     yt-dlp
