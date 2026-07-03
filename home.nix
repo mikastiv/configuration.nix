@@ -22,6 +22,7 @@ in
     unstablePkgs.godot
     unstablePkgs.ida-free
     unstablePkgs.kicad
+    unstablePkgs.osu-lazer-bin
     unstablePkgs.renderdoc
     amdgpu_top
     dolphin-emu

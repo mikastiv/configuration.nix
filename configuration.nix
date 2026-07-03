@@ -44,7 +44,7 @@
       ];
     };
     efi.canTouchEfiVariables = true;
-    timeout = 30;
+    timeout = 15;
   };
 
   # Plymouth
