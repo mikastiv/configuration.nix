@@ -28,6 +28,7 @@ in
     dolphin-emu
     ghidra
     heroic
+    krita
     mupen64plus
     nil
     nixfmt
