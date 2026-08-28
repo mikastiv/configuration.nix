@@ -10,11 +10,16 @@ trim-trailing-whitespace = true
 rulers = [ 100 ]
 indent-heuristic = "simple"
 continue-comments = false
+default-line-ending = "lf"
 
 [editor.auto-pairs]
 
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
@@ -25,6 +30,12 @@ display-progress-messages = true
 
 [editor.statusline]
 right = ["diagnostics", "selections", "register", "position", "file-encoding", "file-line-ending", "file-type"]
+
+[editor.whitespace.render]
+tab = "all"
+
+[editor.file-picker]
+hidden = false
 
 [keys.normal]
 A-h = "jump_view_left"
@@ -56,3 +67,6 @@ A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_befo
 
 [keys.normal.space]
 q = ":quit"
+
+[keys.insert]
+"C-s" = ["normal_mode", ":write"]

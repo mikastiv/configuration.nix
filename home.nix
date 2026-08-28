@@ -30,6 +30,7 @@ in
     heroic
     krita
     mupen64plus
+    musescore-evolution
     nil
     nixfmt
     ncdu
@@ -199,50 +200,50 @@ in
           (createChromiumExtension {
             # ublock origin
             id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";
-            sha256 = "sha256:071w6aivwfdbjgkc40ydm1h6mjwljjdg568d9bcbkvisxjqmz7al";
-            version = "1.71.0";
+            sha256 = "sha256:14c32zm8nzi4i58v6r9p04khqj98i08wrnnm13831cdb7j442vva";
+            version = "1.73.0";
           })
           (createChromiumExtension {
             # 1password
             id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";
-            sha256 = "sha256:08nzkcgcqpm71zrbn189aqpfm3ihy9wsplvcx36p3mw0c623zcna";
-            version = "8.12.24.34";
+            sha256 = "sha256:1xh00riw12rfhfd2xhcvh0x5lp81w8r9c3av9yd59l430qi1xmiv";
+            version = "8.12.32.33";
           })
           (createChromiumExtension {
             # dark reader
             id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
-            sha256 = "sha256:0lwamw0dmjvjjvcidsy2cmrh7azmbjgdrm6wm5ljlpirag0f5bg3";
-            version = "4.9.128";
+            sha256 = "sha256:04xa6wg6fwgswi2n96js2fxfvwrdk1gzd3q2vhnqjhxdvkb1pjwx";
+            version = "4.9.129";
           })
           (createChromiumExtension {
             # decentraleyes
             id = "ldpochfccmkkmhdbclfhpagapcfdljkj";
-            sha256 = "sha256:0k4rxywbr4cgp03wsz51g8x127s4g0a7hkb5g4ygzmp2n8npn9ab";
-            version = "3.0.1";
+            sha256 = "sha256:056slds04sb38gcwgbrigvk05xj7mg82a9mzai7024j5lgsvwnrd";
+            version = "3.0.2";
           })
           (createChromiumExtension {
             # privacy badger
             id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp";
-            sha256 = "sha256:0h4gs3yf5ryrk04djlvdn23mrppvnjjb04vawpw3zm4hlhwgmgxg";
-            version = "2026.6.16";
+            sha256 = "sha256:09yz5w8jmn04fqzgag1d770nn8n7sg2a1vwdkdgl4x8il6kmpvxk";
+            version = "2026.8.7";
           })
           (createChromiumExtension {
             # enhancer for youtube
             id = "ponfpcnoihfmfllpaingbgckeeldkhle";
-            sha256 = "sha256:0sdn9ardadknc2qpbxyc3sr6y6wdpgzncmr2alwrzz7a29gml1y7";
-            version = "3.0.17";
+            sha256 = "sha256:1r1dahy02dhsnj19dcljp4m69c7h40p3gyq97yp9j5xz5a43gz6j";
+            version = "3.0.19";
           })
           (createChromiumExtension {
             # nordvpn
             id = "fjoaledfpmneenckfbpdfhkmimnjocfa";
-            sha256 = "sha256:0cx2h5p50dna3q0aji8gy1nhffbcj6gi33r161hqxdn4g5bx8dm1";
-            version = "5.6.1";
+            sha256 = "sha256:01r7wkrpqy378hb39n2xdpim15d47f32w6c9w7z6ilp2rjylmwah";
+            version = "5.6.5";
           })
           (createChromiumExtension {
             # 7TV
             id = "ammjkodgmmoknidbanneddgankgfejfh";
-            sha256 = "sha256:116rxpgzr20argbmwsk4czrgi941h5671gqap9fbld142viy5hrx";
-            version = "3.1.22";
+            sha256 = "sha256:1cjchkny0g0bbczxv92gp941gsjvizm9wj223bhj8mvp4j1lhlc1";
+            version = "3.1.25";
           })
         ];
     };
