@@ -1,18 +1,14 @@
 {
   pkgs,
+  config,
   unstablePkgs,
-  lib,
   username,
   helix,
   zig-completions,
   ziginit,
-  crx-updater,
   ...
 }:
 
-let
-  chromiumPkg = pkgs.ungoogled-chromium;
-in
 {
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
@@ -47,7 +43,6 @@ in
     yt-dlp
     _7zz
 
-    crx-updater.packages.${pkgs.stdenv.hostPlatform.system}.default
     ziginit.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
@@ -173,79 +168,71 @@ in
       enableGitIntegration = true;
     };
 
-    chromium = {
+    firefox = {
       enable = true;
-      package = chromiumPkg;
-      extensions =
-        let
-          createChromiumExtensionFor =
-            browserVersion:
-            {
-              id,
-              sha256,
-              version,
-            }:
-            {
-              inherit id;
-              inherit version;
-              crxPath = builtins.fetchurl {
-                url = "https://clients2.google.com/service/update2/crx?response=redirect&acceptformat=crx2,crx3&prodversion=${browserVersion}&x=id%3D${id}%26installsource%3Dondemand%26uc";
-                name = "${id}.crx";
-                inherit sha256;
-              };
+      configPath = "${config.xdg.configHome}/mozilla/firefox";
+
+      policies = {
+        PasswordManagerEnabled = false;
+        OfferToSaveLogins = false;
+      };
+
+      profiles.default = {
+        isDefault = true;
+
+        settings = {
+          # Restore tabs on startup
+          "browser.startup.page" = 3;
+          "browser.toolbars.bookmarks.visibility" = "always";
+
+          "signon.rememberSignons" = false;
+          "signon.autofillForms" = false;
+          "signon.generation.enabled" = false;
+          "signon.management.page.enabled" = false;
+        };
+
+        search = {
+          default = "ddg";
+          force = true;
+
+          engines = {
+            nix-packages = {
+              name = "Nix Packages";
+              urls = [
+                {
+                  template = "https://search.nixos.org/packages";
+                  params = [
+                    {
+                      name = "type";
+                      value = "packages";
+                    }
+                    {
+                      name = "query";
+                      value = "{searchTerms}";
+                    }
+                  ];
+                }
+              ];
+
+              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+              definedAliases = [ "@np" ];
             };
-          createChromiumExtension = createChromiumExtensionFor (lib.versions.major chromiumPkg.version);
-        in
-        [
-          (createChromiumExtension {
-            # ublock origin
-            id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";
-            sha256 = "sha256:14c32zm8nzi4i58v6r9p04khqj98i08wrnnm13831cdb7j442vva";
-            version = "1.73.0";
-          })
-          (createChromiumExtension {
-            # 1password
-            id = "aeblfdkhhhdcdjpifhhbdiojplfjncoa";
-            sha256 = "sha256:1xh00riw12rfhfd2xhcvh0x5lp81w8r9c3av9yd59l430qi1xmiv";
-            version = "8.12.32.33";
-          })
-          (createChromiumExtension {
-            # dark reader
-            id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
-            sha256 = "sha256:04xa6wg6fwgswi2n96js2fxfvwrdk1gzd3q2vhnqjhxdvkb1pjwx";
-            version = "4.9.129";
-          })
-          (createChromiumExtension {
-            # decentraleyes
-            id = "ldpochfccmkkmhdbclfhpagapcfdljkj";
-            sha256 = "sha256:056slds04sb38gcwgbrigvk05xj7mg82a9mzai7024j5lgsvwnrd";
-            version = "3.0.2";
-          })
-          (createChromiumExtension {
-            # privacy badger
-            id = "pkehgijcmpdhfbdbbnkijodmdjhbjlgp";
-            sha256 = "sha256:09yz5w8jmn04fqzgag1d770nn8n7sg2a1vwdkdgl4x8il6kmpvxk";
-            version = "2026.8.7";
-          })
-          (createChromiumExtension {
-            # enhancer for youtube
-            id = "ponfpcnoihfmfllpaingbgckeeldkhle";
-            sha256 = "sha256:1r1dahy02dhsnj19dcljp4m69c7h40p3gyq97yp9j5xz5a43gz6j";
-            version = "3.0.19";
-          })
-          (createChromiumExtension {
-            # nordvpn
-            id = "fjoaledfpmneenckfbpdfhkmimnjocfa";
-            sha256 = "sha256:01r7wkrpqy378hb39n2xdpim15d47f32w6c9w7z6ilp2rjylmwah";
-            version = "5.6.5";
-          })
-          (createChromiumExtension {
-            # 7TV
-            id = "ammjkodgmmoknidbanneddgankgfejfh";
-            sha256 = "sha256:1cjchkny0g0bbczxv92gp941gsjvizm9wj223bhj8mvp4j1lhlc1";
-            version = "3.1.25";
-          })
-        ];
+
+            bing.metaData.hidden = true;
+          };
+        };
+
+        extensions = {
+          packages = with pkgs.nur.repos.rycee.firefox-addons; [
+            ublock-origin
+            onepassword-password-manager
+            darkreader
+            decentraleyes
+            privacy-badger
+            enhancer-for-youtube
+          ];
+        };
+      };
     };
 
     git = {

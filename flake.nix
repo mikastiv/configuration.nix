@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     helix = {
       url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,11 +29,6 @@
       url = "git+https://codeberg.org/mikastiv/ziginit";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    crx-updater = {
-      url = "git+https://codeberg.org/mikastiv/crx-updater";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -36,10 +36,10 @@
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
+      nur,
       helix,
       zig-completions,
       ziginit,
-      crx-updater,
       ...
     }@inputs:
     let
@@ -50,7 +50,7 @@
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [ ];
+        overlays = [ nur.overlays.default ];
       };
 
       unstablePkgs = import nixpkgs-unstable {
@@ -77,7 +77,6 @@
           ./modules/plasma.nix
           ./modules/1password.nix
           ./modules/steam.nix
-          ./modules/chromium_policies.nix
           # ./modules/clamav.nix
 
           home-manager.nixosModules.home-manager
@@ -92,7 +91,6 @@
               inherit helix;
               inherit zig-completions;
               inherit ziginit;
-              inherit crx-updater;
             };
           }
 
