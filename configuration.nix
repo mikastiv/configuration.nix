@@ -38,6 +38,8 @@
         /Windows Boot Manager
             protocol: efi
             path: boot():/EFI/Microsoft/Boot/bootmgfw.efi
+            comment: Windows 11
+
       '';
       style.wallpapers = [
         pkgs.nixos-artwork.wallpapers.nineish-dark-gray.kdeFilePath
