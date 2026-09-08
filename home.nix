@@ -230,6 +230,7 @@
             decentraleyes
             privacy-badger
             enhancer-for-youtube
+            return-youtube-dislikes
           ];
         };
       };
