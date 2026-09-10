@@ -168,6 +168,71 @@
       enableGitIntegration = true;
     };
 
+    librewolf = {
+      enable = true;
+
+      policies = {
+        PasswordManagerEnabled = false;
+        OfferToSaveLogins = false;
+      };
+
+      profiles.default = {
+        isDefault = true;
+
+        settings = {
+          # Restore tabs on startup
+          "browser.startup.page" = 3;
+          "browser.toolbars.bookmarks.visibility" = "always";
+
+          # Disable password manager
+          "signon.rememberSignons" = false;
+          "signon.autofillForms" = false;
+          "signon.generation.enabled" = false;
+          "signon.management.page.enabled" = false;
+        };
+
+        search = {
+          engines = {
+            nix-packages = {
+              name = "Nix Packages";
+              urls = [
+                {
+                  template = "https://search.nixos.org/packages";
+                  params = [
+                    {
+                      name = "type";
+                      value = "packages";
+                    }
+                    {
+                      name = "query";
+                      value = "{searchTerms}";
+                    }
+                  ];
+                }
+              ];
+
+              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+              definedAliases = [ "@np" ];
+            };
+
+            bing.metaData.hidden = true;
+          };
+        };
+
+        extensions = {
+          packages = with pkgs.nur.repos.rycee.firefox-addons; [
+            ublock-origin
+            onepassword-password-manager
+            darkreader
+            decentraleyes
+            privacy-badger
+            enhancer-for-youtube
+            return-youtube-dislikes
+          ];
+        };
+      };
+    };
+
     firefox = {
       enable = true;
       configPath = "${config.xdg.configHome}/mozilla/firefox";
