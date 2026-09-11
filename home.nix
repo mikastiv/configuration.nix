@@ -54,8 +54,8 @@
     ".config/yazi/yazi.toml".source = dotfiles/yazi/yazi.toml;
     ".config/ghostty/config".source = dotfiles/ghostty/config;
     ".config/starship.toml".source = dotfiles/starship/starship.toml;
-    ".config/autostart/OpenRGB.desktop".source = dotfiles/OpenRGB/OpenRGB.desktop;
     ".config/OpenRGB/mikastiv.orp".source = dotfiles/OpenRGB/mikastiv.orp;
+    ".config/OpenRGB/sizes.ors".source = dotfiles/OpenRGB/sizes.ors;
     ".ssh/config".source = dotfiles/ssh/config;
     ".zig-completions" = {
       source = zig-completions;
@@ -75,6 +75,19 @@
       setSessionVariables = true;
       templates = null;
       publicShare = null;
+    };
+
+    configFile = {
+      "autostart/OpenRGB.desktop".text = ''
+        [Desktop Entry]
+        Categories=Utility;
+        Comment=OpenRGB, for controlling RGB lighting.
+        Icon=OpenRGB
+        Name=OpenRGB
+        Terminal=false
+        Type=Application
+        Exec=/run/current-system/sw/bin/openrgb --profile mikastiv.orp
+      '';
     };
   };
 
@@ -168,71 +181,6 @@
       enableGitIntegration = true;
     };
 
-    librewolf = {
-      enable = true;
-
-      policies = {
-        PasswordManagerEnabled = false;
-        OfferToSaveLogins = false;
-      };
-
-      profiles.default = {
-        isDefault = true;
-
-        settings = {
-          # Restore tabs on startup
-          "browser.startup.page" = 3;
-          "browser.toolbars.bookmarks.visibility" = "always";
-
-          # Disable password manager
-          "signon.rememberSignons" = false;
-          "signon.autofillForms" = false;
-          "signon.generation.enabled" = false;
-          "signon.management.page.enabled" = false;
-        };
-
-        search = {
-          engines = {
-            nix-packages = {
-              name = "Nix Packages";
-              urls = [
-                {
-                  template = "https://search.nixos.org/packages";
-                  params = [
-                    {
-                      name = "type";
-                      value = "packages";
-                    }
-                    {
-                      name = "query";
-                      value = "{searchTerms}";
-                    }
-                  ];
-                }
-              ];
-
-              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-              definedAliases = [ "@np" ];
-            };
-
-            bing.metaData.hidden = true;
-          };
-        };
-
-        extensions = {
-          packages = with pkgs.nur.repos.rycee.firefox-addons; [
-            ublock-origin
-            onepassword-password-manager
-            darkreader
-            decentraleyes
-            privacy-badger
-            enhancer-for-youtube
-            return-youtube-dislikes
-          ];
-        };
-      };
-    };
-
     firefox = {
       enable = true;
       configPath = "${config.xdg.configHome}/mozilla/firefox";
@@ -300,6 +248,71 @@
         };
       };
     };
+
+    # librewolf = {
+    #   enable = true;
+
+    #   policies = {
+    #     PasswordManagerEnabled = false;
+    #     OfferToSaveLogins = false;
+    #   };
+
+    #   profiles.default = {
+    #     isDefault = true;
+
+    #     settings = {
+    #       # Restore tabs on startup
+    #       "browser.startup.page" = 3;
+    #       "browser.toolbars.bookmarks.visibility" = "always";
+
+    #       # Disable password manager
+    #       "signon.rememberSignons" = false;
+    #       "signon.autofillForms" = false;
+    #       "signon.generation.enabled" = false;
+    #       "signon.management.page.enabled" = false;
+    #     };
+
+    #     search = {
+    #       engines = {
+    #         nix-packages = {
+    #           name = "Nix Packages";
+    #           urls = [
+    #             {
+    #               template = "https://search.nixos.org/packages";
+    #               params = [
+    #                 {
+    #                   name = "type";
+    #                   value = "packages";
+    #                 }
+    #                 {
+    #                   name = "query";
+    #                   value = "{searchTerms}";
+    #                 }
+    #               ];
+    #             }
+    #           ];
+
+    #           icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+    #           definedAliases = [ "@np" ];
+    #         };
+
+    #         bing.metaData.hidden = true;
+    #       };
+    #     };
+
+    #     extensions = {
+    #       packages = with pkgs.nur.repos.rycee.firefox-addons; [
+    #         ublock-origin
+    #         onepassword-password-manager
+    #         darkreader
+    #         decentraleyes
+    #         privacy-badger
+    #         enhancer-for-youtube
+    #         return-youtube-dislikes
+    #       ];
+    #     };
+    #   };
+    # };
 
     git = {
       enable = true;
