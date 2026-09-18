@@ -38,6 +38,7 @@
     tinyxxd
     tokei
     transcribe
+    usbutils
     vlc
     wl-clipboard
     yt-dlp
@@ -243,7 +244,6 @@
             decentraleyes
             privacy-badger
             enhancer-for-youtube
-            return-youtube-dislikes
           ];
         };
       };

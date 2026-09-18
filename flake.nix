@@ -29,6 +29,11 @@
       url = "git+https://codeberg.org/mikastiv/ziginit";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    flux-pro-display = {
+      url = "git+https://codeberg.org/mikastiv/flux-pro-display";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -40,6 +45,7 @@
       helix,
       zig-completions,
       ziginit,
+      flux-pro-display,
       ...
     }@inputs:
     let
@@ -78,6 +84,8 @@
           ./modules/1password.nix
           ./modules/steam.nix
           # ./modules/clamav.nix
+
+          flux-pro-display.nixosModules.default
 
           home-manager.nixosModules.home-manager
           {

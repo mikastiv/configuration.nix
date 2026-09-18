@@ -64,6 +64,16 @@
     hybrid-sleep.enable = false;
   };
 
+  # Flux Pro Display
+  services.flux-pro-display = {
+    enable = true;
+
+    cpu_vid = 4130;
+    cpu_pid = 5347;
+    gpu_vid = 4098;
+    gpu_pid = 30032;
+  };
+
   # Graphics
   hardware.graphics.enable = true;
 

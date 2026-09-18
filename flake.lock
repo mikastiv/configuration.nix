@@ -21,6 +21,27 @@
         "type": "github"
       }
     },
+    "flux-pro-display": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "zig-flake": "zig-flake"
+      },
+      "locked": {
+        "lastModified": 1789763778,
+        "narHash": "sha256-ybjNG7YTRWZPgz+emdnNHS/YyCvOGoAzNdBt6woyciw=",
+        "ref": "refs/heads/main",
+        "rev": "5fa6e3d8c46f89dd89e596fd8af0089fbb31e68a",
+        "revCount": 6,
+        "type": "git",
+        "url": "https://codeberg.org/mikastiv/flux-pro-display"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/mikastiv/flux-pro-display"
+      }
+    },
     "helix": {
       "inputs": {
         "nixpkgs": [
@@ -118,6 +139,7 @@
     },
     "root": {
       "inputs": {
+        "flux-pro-display": "flux-pro-display",
         "helix": "helix",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
@@ -167,16 +189,37 @@
     "zig-flake": {
       "inputs": {
         "nixpkgs": [
+          "flux-pro-display",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1789637728,
+        "narHash": "sha256-lP45iGmyahoAOQGzoEipJT23ooqG2k3uev8sY9eTONU=",
+        "owner": "silversquirl",
+        "repo": "zig-flake",
+        "rev": "fdc47a84d933e7d7072aa2e086a82dac17e3136a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "silversquirl",
+        "repo": "zig-flake",
+        "type": "github"
+      }
+    },
+    "zig-flake_2": {
+      "inputs": {
+        "nixpkgs": [
           "ziginit",
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1779826381,
-        "narHash": "sha256-IiAPzTRC6EYGwQcVdJOyvQ2dArHQqNfwtZ1jlwYg5mw=",
+        "lastModified": 1789637728,
+        "narHash": "sha256-lP45iGmyahoAOQGzoEipJT23ooqG2k3uev8sY9eTONU=",
         "owner": "silversquirl",
         "repo": "zig-flake",
-        "rev": "f83b1ef1c012eaacf194d06703cd7d70839f6201",
+        "rev": "fdc47a84d933e7d7072aa2e086a82dac17e3136a",
         "type": "github"
       },
       "original": {
@@ -190,14 +233,14 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "zig-flake": "zig-flake"
+        "zig-flake": "zig-flake_2"
       },
       "locked": {
-        "lastModified": 1782162848,
-        "narHash": "sha256-4Q+rNmhaUhv+vRPqMKg+BsxKX9Kq7k+iT9aSw6BgtY0=",
+        "lastModified": 1789758921,
+        "narHash": "sha256-LBDIiQE5VNcacLxVH+g/gM5guYhzDAOSBPzE62tmvJI=",
         "ref": "refs/heads/main",
-        "rev": "b2be8ae072806dad60e48da465b7e68b5d62b542",
-        "revCount": 18,
+        "rev": "5509ead064fcb28554c4d14be6ea9b3ad2e0c7f8",
+        "revCount": 19,
         "type": "git",
         "url": "https://codeberg.org/mikastiv/ziginit"
       },
