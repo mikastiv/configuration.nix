@@ -29,11 +29,11 @@
         "zig-flake": "zig-flake"
       },
       "locked": {
-        "lastModified": 1789763778,
-        "narHash": "sha256-ybjNG7YTRWZPgz+emdnNHS/YyCvOGoAzNdBt6woyciw=",
+        "lastModified": 1789764636,
+        "narHash": "sha256-fHXQARUcVN67D3Th7TxVAvMUyBZMUT1KOzdtmBd40Rc=",
         "ref": "refs/heads/main",
-        "rev": "5fa6e3d8c46f89dd89e596fd8af0089fbb31e68a",
-        "revCount": 6,
+        "rev": "977ee09582531ecf26c14bb738c782e3a18d62c4",
+        "revCount": 7,
         "type": "git",
         "url": "https://codeberg.org/mikastiv/flux-pro-display"
       },
