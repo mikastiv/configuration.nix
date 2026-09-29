@@ -25,6 +25,8 @@
     ghidra
     heroic
     krita
+    man-pages
+    man-pages-posix
     mupen64plus
     musescore-evolution
     nil
@@ -100,6 +102,7 @@
     fd.enable = true;
     jq.enable = true;
     lazygit.enable = true;
+    man.enable = true;
     ripgrep.enable = true;
 
     starship = {
