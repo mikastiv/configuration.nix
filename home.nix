@@ -246,7 +246,6 @@
             darkreader
             decentraleyes
             privacy-badger
-            enhancer-for-youtube
           ];
         };
       };
