@@ -22,6 +22,7 @@
     unstablePkgs.renderdoc
     amdgpu_top
     dolphin-emu
+    file
     ghidra
     heroic
     krita
