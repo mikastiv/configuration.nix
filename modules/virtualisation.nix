@@ -11,5 +11,7 @@
       enable = true;
       qemu.vhostUserPackages = [ pkgs.virtiofsd ];
     };
+
+    vmware.host.enable = true;
   };
 }

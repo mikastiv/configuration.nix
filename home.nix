@@ -19,7 +19,7 @@
     unstablePkgs.ida-free
     unstablePkgs.kicad
     unstablePkgs.osu-lazer-bin
-    unstablePkgs.renderdoc
+    renderdoc
     amdgpu_top
     dolphin-emu
     file
