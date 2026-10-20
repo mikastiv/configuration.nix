@@ -14,6 +14,7 @@
   home.homeDirectory = "/home/${username}";
 
   home.packages = with pkgs; [
+    unstablePkgs.codex
     unstablePkgs.ftb-app
     unstablePkgs.godot
     unstablePkgs.ida-free
@@ -79,6 +80,7 @@
       setSessionVariables = true;
       templates = null;
       publicShare = null;
+      projects = null;
     };
 
     configFile = {

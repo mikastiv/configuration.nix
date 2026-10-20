@@ -1,6 +1,7 @@
 theme = "ocean-space"
 
 [editor]
+scrolloff = 8
 bufferline = "multiple"
 cursorline = true
 end-of-line-diagnostics = "hint"
