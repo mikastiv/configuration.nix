@@ -48,6 +48,7 @@ C-u = ["page_cursor_half_up", "align_view_center"]
 C-m = "save_selection"
 C-s = ":write"
 C-q = ":buffer-close"
+C-r = ":reload"
 ret = ["open_below", "normal_mode"]
 S-ret = ["open_above", "normal_mode"]
 X = "extend_line_above"
