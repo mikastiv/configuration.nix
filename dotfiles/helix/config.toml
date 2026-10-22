@@ -2,7 +2,7 @@ theme = "ocean-space"
 
 [editor]
 scrolloff = 8
-bufferline = "multiple"
+# bufferline = "multiple"
 cursorline = true
 end-of-line-diagnostics = "hint"
 line-number = "relative"
@@ -12,6 +12,14 @@ rulers = [ 100 ]
 indent-heuristic = "simple"
 continue-comments = false
 default-line-ending = "lf"
+rounded-corners = true
+
+[editor.auto-reload]
+focus-gained = true
+
+[editor.bufferline]
+render-mode = "multiple"
+separator = ""
 
 [editor.auto-pairs]
 
@@ -62,13 +70,18 @@ C-y = [
 ]
 
 # Move lines up and down
-A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-A-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+A-j = ["move_lines_down"]
+A-k = ["move_lines_up"]
+A-down = ["move_lines_down"]
+A-up = ["move_lines_up"]
+# A-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+# A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+# A-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+# A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
 [keys.normal.space]
 q = ":quit"
+A = "code_action_picker"
 
 [keys.insert]
 "C-s" = ["normal_mode", ":write"]
