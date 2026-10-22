@@ -17,7 +17,6 @@
     unstablePkgs.codex
     unstablePkgs.ftb-app
     unstablePkgs.godot
-    unstablePkgs.ida-free
     unstablePkgs.kicad
     unstablePkgs.osu-lazer-bin
     renderdoc
