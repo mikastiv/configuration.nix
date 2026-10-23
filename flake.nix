@@ -16,8 +16,7 @@
     };
 
     helix = {
-      # url = "github:helix-editor/helix";
-      url = "github:gj1118/helix";
+      url = "github:helix-editor/helix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
