@@ -29,11 +29,11 @@
         "zig-flake": "zig-flake"
       },
       "locked": {
-        "lastModified": 1791357912,
-        "narHash": "sha256-LJ9o7wN3nb5n1TGv4fEUEFcGv2gECjeHfYCC0zN6alo=",
+        "lastModified": 1793082289,
+        "narHash": "sha256-dKe2eMV90Q9gdiIFfsx2wLKxCKfezMujk1deo8GFOBM=",
         "ref": "refs/heads/main",
-        "rev": "90ad40954eef4585bb643bdc4b6bbd87fd76c9cc",
-        "revCount": 13,
+        "rev": "a77feca2929df59b7b6b3df5c282f4e94d3cc8b0",
+        "revCount": 14,
         "type": "git",
         "url": "https://codeberg.org/mikastiv/flux-pro-display"
       },
@@ -194,11 +194,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789637728,
-        "narHash": "sha256-lP45iGmyahoAOQGzoEipJT23ooqG2k3uev8sY9eTONU=",
+        "lastModified": 1793065607,
+        "narHash": "sha256-WgNNW5ejdWgD5xybl29EwgICGpuyeWwPD6WB+fnnUeM=",
         "owner": "silversquirl",
         "repo": "zig-flake",
-        "rev": "fdc47a84d933e7d7072aa2e086a82dac17e3136a",
+        "rev": "ae86aaedc5f66df9359f5cb3e5d901cc04f1539f",
         "type": "github"
       },
       "original": {
