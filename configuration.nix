@@ -58,8 +58,10 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  # Disable hibernate
+  # Disable hibernate and sleep
   systemd.targets = {
+    sleep.enable = false;
+    suspend.enable = false;
     hibernate.enable = false;
     hybrid-sleep.enable = false;
   };
