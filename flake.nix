@@ -86,6 +86,7 @@
           ./modules/steam.nix
           ./modules/virtualisation.nix
           ./modules/certificate.nix
+          ./modules/mptcp.nix
           # ./modules/clamav.nix
 
           flux-pro-display.nixosModules.default
