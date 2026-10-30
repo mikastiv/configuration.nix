@@ -215,11 +215,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789637728,
-        "narHash": "sha256-lP45iGmyahoAOQGzoEipJT23ooqG2k3uev8sY9eTONU=",
+        "lastModified": 1793250064,
+        "narHash": "sha256-sp74q8evEpIDMWsNgnsFOrHZ19In1Ofr3d6VbwRjQ6o=",
         "owner": "silversquirl",
         "repo": "zig-flake",
-        "rev": "fdc47a84d933e7d7072aa2e086a82dac17e3136a",
+        "rev": "90635a8a281cf82119d726d42fd4a853c9afb422",
         "type": "github"
       },
       "original": {
@@ -236,11 +236,11 @@
         "zig-flake": "zig-flake_2"
       },
       "locked": {
-        "lastModified": 1789758921,
-        "narHash": "sha256-LBDIiQE5VNcacLxVH+g/gM5guYhzDAOSBPzE62tmvJI=",
+        "lastModified": 1793302383,
+        "narHash": "sha256-N4hfwJt8j6nba1q6lSRXaD7bhI+eoYG+C4AN4TH9QIs=",
         "ref": "refs/heads/main",
-        "rev": "5509ead064fcb28554c4d14be6ea9b3ad2e0c7f8",
-        "revCount": 19,
+        "rev": "a5d019407909907223300595bd7e5650ac265609",
+        "revCount": 20,
         "type": "git",
         "url": "https://codeberg.org/mikastiv/ziginit"
       },

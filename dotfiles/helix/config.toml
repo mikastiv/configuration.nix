@@ -39,6 +39,9 @@ tab = "all"
 [editor.file-picker]
 hidden = false
 
+[editor.search]
+smart-case = false
+
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
 A-h = "jump_view_left"
