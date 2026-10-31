@@ -12,6 +12,8 @@ trim-trailing-whitespace = true
 rulers = [ 100 ]
 scrolloff = 8
 
+[editor.auto-pairs]
+
 [editor.cursor-shape]
 insert = "bar"
 select = "underline"
