@@ -11,8 +11,8 @@ trim-trailing-whitespace = true
 '{' = '}'
 '[' = ']'
 
-[editor.breadcrumb]
-enable = true
+# [editor.breadcrumb]
+# enable = true
 
 [editor.cursor.shape]
 insert = "bar"
