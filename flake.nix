@@ -21,6 +21,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    mitos = {
+      url = "github:mitos-editor/mitos";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
     zig-completions = {
       url = "git+https://codeberg.org/ziglang/shell-completions";
       flake = false;
@@ -44,6 +49,7 @@
       home-manager,
       nur,
       helix,
+      mitos,
       zig-completions,
       ziginit,
       flux-pro-display,
@@ -100,6 +106,7 @@
               inherit username;
               inherit unstablePkgs;
               inherit helix;
+              inherit mitos;
               inherit zig-completions;
               inherit ziginit;
             };

@@ -53,6 +53,7 @@
 "ui.virtual.indent-guide" = "light-gray"
 "ui.virtual.inlay-hint" = { modifiers = ["dim"] }
 "ui.virtual.jump-label" = { fg = "hot-pink", modifiers = ["bold"] }
+"ui.virtual.whitespace" = "light-gray"
 "ui.menu" = { bg = "bg" }
 "ui.menu.selected" = { bg = "selected" }
 "ui.menu.scroll" = "bar"

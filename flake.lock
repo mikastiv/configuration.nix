@@ -84,6 +84,26 @@
         "type": "github"
       }
     },
+    "mitos": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793569227,
+        "narHash": "sha256-H8yqMdNLG49pQfagcb1kngXJDjvkvLubYQ/GUa3g0nA=",
+        "owner": "mitos-editor",
+        "repo": "mitos",
+        "rev": "0e4c35ea567e75545c284bb295cba7314f95a35a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mitos-editor",
+        "repo": "mitos",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1793294725,
@@ -142,6 +162,7 @@
         "flux-pro-display": "flux-pro-display",
         "helix": "helix",
         "home-manager": "home-manager",
+        "mitos": "mitos",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nur": "nur",

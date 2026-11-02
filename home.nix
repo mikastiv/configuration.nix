@@ -4,6 +4,7 @@
   unstablePkgs,
   username,
   helix,
+  mitos,
   zig-completions,
   ziginit,
   ...
@@ -47,6 +48,7 @@
     yt-dlp
     _7zz
 
+    mitos.packages.${pkgs.stdenv.hostPlatform.system}.default
     ziginit.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
@@ -55,6 +57,8 @@
     ".config/lazygit/config.yml".source = dotfiles/lazygit/config.yml;
     ".config/helix/config.toml".source = dotfiles/helix/config.toml;
     ".config/helix/themes/ocean-space.toml".source = dotfiles/helix/themes/ocean-space.toml;
+    ".config/mitos/config.toml".source = dotfiles/mitos/config.toml;
+    ".config/mitos/themes/ocean-space.toml".source = dotfiles/mitos/themes/ocean-space.toml;
     ".config/yazi/yazi.toml".source = dotfiles/yazi/yazi.toml;
     ".config/ghostty/config".source = dotfiles/ghostty/config;
     ".config/starship.toml".source = dotfiles/starship/starship.toml;
