@@ -6,6 +6,9 @@ default-line-ending = "lf"
 icons = true
 trim-trailing-whitespace = true
 
+[editor.lsp.semantic-tokens]
+enable = false
+
 [editor.auto-pairs]
 '(' = ')'
 '{' = '}'
@@ -44,13 +47,16 @@ right = ["diagnostics", "selections", "register", "position", "file-encoding", "
 default = "trailing"
 tab = "all"
 
+[editor.rainbow-brackets]
+enable = true
+
 [keys.normal]
 C-h = ":buffer-previous"
 C-l = ":buffer-next"
 C-s = ":write"
 C-q = ":buffer-close"
-C-d = ["page_cursor_half_down", "align_view_center"]
-C-u = ["page_cursor_half_up", "align_view_center"]
+C-d = ["page_cursor_half_down", "center_view_vertically"]
+C-u = ["page_cursor_half_up", "center_view_vertically"]
 C-j = "save_selection"
 X = "extend_line_above"
 ret = ["open_below", "normal_mode"]
