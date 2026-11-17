@@ -59,6 +59,10 @@
 "ui.menu.scroll" = "bar"
 "ui.selection" = { bg = "selected" }
 "ui.cursorline.primary" = { bg = "bg-light" }
+"ui.diagnostic.inline.hint" = { fg = "blue" }
+"ui.diagnostic.inline.info" = { fg = "blue" }
+"ui.diagnostic.inline.warning" = { fg = "yellow" }
+"ui.diagnostic.inline.error" = { fg = "red" }
 
 "warning" = "yellow"
 "error" = "red"

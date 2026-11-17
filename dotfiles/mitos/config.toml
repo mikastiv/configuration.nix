@@ -37,9 +37,6 @@ padding = 8
 [editor.search]
 smart-case = false
 
-[editor.spelling]
-languages = ["en_US"]
-
 [editor.statusline]
 right = ["diagnostics", "selections", "register", "position", "file-encoding", "file-line-ending", "file-type"]
 
