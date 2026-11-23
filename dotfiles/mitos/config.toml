@@ -5,6 +5,7 @@ bufferline = "multiple"
 default-line-ending = "lf"
 icons = true
 trim-trailing-whitespace = true
+indent-heuristic = "simple"
 
 [editor.lsp.semantic-tokens]
 enable = false

@@ -119,6 +119,7 @@
     direnv = {
       enable = true;
       enableZshIntegration = true;
+      # enableGitIntegration = true;
       nix-direnv.enable = true;
     };
 
